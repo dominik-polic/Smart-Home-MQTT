@@ -1,0 +1,4755 @@
+[
+    {
+        "id": "ad37b19c.6e3cf",
+        "type": "tab",
+        "label": "Lights",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "5ca74b14.4bc484",
+        "type": "tab",
+        "label": "Doors / Gates",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "6ce645dd.347edc",
+        "type": "tab",
+        "label": "Control Logic",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "20b58b0f.00b8b4",
+        "type": "tab",
+        "label": "Remote App",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ded91b28.b9e3a8",
+        "type": "tab",
+        "label": "Panel",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "83be0801.deeb68",
+        "type": "tab",
+        "label": "Development",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "3eed2112.8c1d2e",
+        "type": "tab",
+        "label": "Testing",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "eaefbe14.0c428",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "Mosquitto",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "87f72b2b.1cabd8",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#4caf50",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#4caf50",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#4caf50",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#80c883",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#4caf50",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "House Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 52,
+                "sy": 52,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "7089d09e.5eaa5",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Home",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "5ecfb5b.c759d4c",
+        "type": "ui_group",
+        "z": "",
+        "name": "Living Room",
+        "tab": "7089d09e.5eaa5",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "f03b32a4.4142",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Graphs",
+        "icon": "pie_chart",
+        "order": 3
+    },
+    {
+        "id": "8ccd6141.0bd92",
+        "type": "ui_group",
+        "z": "",
+        "name": "House",
+        "tab": "7089d09e.5eaa5",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "2706f0ba.d3f94",
+        "type": "ui_group",
+        "z": "",
+        "name": "Dominik's Room",
+        "tab": "7089d09e.5eaa5",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "3153cc39.9368f4",
+        "type": "ui_group",
+        "z": "",
+        "name": "Who is home",
+        "tab": "7089d09e.5eaa5",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "c9090456.25cf88",
+        "type": "ui_group",
+        "z": "",
+        "name": "Living Room",
+        "tab": "f03b32a4.4142",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "8474ad06.8594",
+        "type": "ui_group",
+        "z": "",
+        "name": "Dominik's Room",
+        "tab": "f03b32a4.4142",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "c0cb2341.025c6",
+        "type": "ui_group",
+        "z": "",
+        "name": "House",
+        "tab": "f03b32a4.4142",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "6f2503eb.31960c",
+        "type": "ui_group",
+        "z": "",
+        "name": "Dining Room",
+        "tab": "7089d09e.5eaa5",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "f2054683.33aae8",
+        "type": "serial-port",
+        "z": "",
+        "serialport": "/dev/ttyUSB0",
+        "serialbaud": "57600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": false,
+        "responsetimeout": "1000"
+    },
+    {
+        "id": "9e839501.d81908",
+        "type": "mqtt in",
+        "z": "ad37b19c.6e3cf",
+        "name": "",
+        "topic": "switches/livingroom/1",
+        "qos": "0",
+        "broker": "eaefbe14.0c428",
+        "x": 140,
+        "y": 160,
+        "wires": [
+            [
+                "10fe5b12.51c205"
+            ]
+        ]
+    },
+    {
+        "id": "10fe5b12.51c205",
+        "type": "mqtt out",
+        "z": "ad37b19c.6e3cf",
+        "name": "",
+        "topic": "lights/livingroom/1",
+        "qos": "0",
+        "retain": "true",
+        "broker": "eaefbe14.0c428",
+        "x": 810,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "c256e1a9.06506",
+        "type": "ui_switch",
+        "z": "ad37b19c.6e3cf",
+        "name": "",
+        "label": "Light 1",
+        "tooltip": "",
+        "group": "5ecfb5b.c759d4c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 510,
+        "y": 220,
+        "wires": [
+            [
+                "10fe5b12.51c205"
+            ]
+        ]
+    },
+    {
+        "id": "f3bd13c.00761f",
+        "type": "mqtt in",
+        "z": "ad37b19c.6e3cf",
+        "name": "",
+        "topic": "lights/livingroom/1",
+        "qos": "0",
+        "broker": "eaefbe14.0c428",
+        "x": 130,
+        "y": 220,
+        "wires": [
+            [
+                "f7a1e6f6.3feb28",
+                "c256e1a9.06506"
+            ]
+        ]
+    },
+    {
+        "id": "37b3dcd8.ade0b4",
+        "type": "mqtt in",
+        "z": "ad37b19c.6e3cf",
+        "name": "",
+        "topic": "lights/livingroom/2",
+        "qos": "0",
+        "broker": "eaefbe14.0c428",
+        "x": 130,
+        "y": 420,
+        "wires": [
+            [
+                "ff8c4dc8.f86bd",
+                "a411c84f.e21048"
+            ]
+        ]
+    },
+    {
+        "id": "ff8c4dc8.f86bd",
+        "type": "ui_switch",
+        "z": "ad37b19c.6e3cf",
+        "name": "",
+        "label": "Light 2",
+        "tooltip": "",
+        "group": "5ecfb5b.c759d4c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 510,
+        "y": 420,
+        "wires": [
+            [
+                "4758851f.8787bc"
+            ]
+        ]
+    },
+    {
+        "id": "4758851f.8787bc",
+        "type": "mqtt out",
+        "z": "ad37b19c.6e3cf",
+        "name": "",
+        "topic": "lights/livingroom/2",
+        "qos": "0",
+        "retain": "true",
+        "broker": "eaefbe14.0c428",
+        "x": 810,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "2bf79897.80bcf8",
+        "type": "inject",
+        "z": "ad37b19c.6e3cf",
+        "name": "Lights off at 1am",
+        "topic": "",
+        "payload": "off",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "00 01 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 550,
+        "y": 80,
+        "wires": [
+            [
+                "4758851f.8787bc",
+                "10fe5b12.51c205"
+            ]
+        ]
+    },
+    {
+        "id": "743fed56.ce12f4",
+        "type": "mqtt in",
+        "z": "ad37b19c.6e3cf",
+        "name": "",
+        "topic": "switches/livingroom/2",
+        "qos": "0",
+        "broker": "eaefbe14.0c428",
+        "x": 140,
+        "y": 360,
+        "wires": [
+            [
+                "4758851f.8787bc"
+            ]
+        ]
+    },
+    {
+        "id": "2aa78365.bf2bac",
+        "type": "mqtt out",
+        "z": "5ca74b14.4bc484",
+        "name": "",
+        "topic": "lock/door/house",
+        "qos": "0",
+        "retain": "true",
+        "broker": "eaefbe14.0c428",
+        "x": 840,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "dea86d2b.71bd5",
+        "type": "mqtt in",
+        "z": "5ca74b14.4bc484",
+        "name": "",
+        "topic": "switch/door/house",
+        "qos": "0",
+        "broker": "eaefbe14.0c428",
+        "x": 130,
+        "y": 160,
+        "wires": [
+            [
+                "f28f2fd6.58da1",
+                "b9c87fd5.0192e"
+            ]
+        ]
+    },
+    {
+        "id": "a7594d6f.08a1f",
+        "type": "mqtt in",
+        "z": "5ca74b14.4bc484",
+        "name": "",
+        "topic": "lock/door/house",
+        "qos": "2",
+        "broker": "eaefbe14.0c428",
+        "x": 140,
+        "y": 260,
+        "wires": [
+            [
+                "a4fd72fe.f77c5",
+                "af5df6ab.2b6768",
+                "16a02f87.1eff9"
+            ]
+        ]
+    },
+    {
+        "id": "a4fd72fe.f77c5",
+        "type": "function",
+        "z": "5ca74b14.4bc484",
+        "name": "save state",
+        "func": "global.set(\"house_door_state\",msg.payload);\nif(msg.payload==\"lock\")\n    msg.payload=1;\nelse\n    msg.payload=0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 330,
+        "y": 300,
+        "wires": [
+            [
+                "e0bd2ffb.61e73"
+            ]
+        ]
+    },
+    {
+        "id": "af5df6ab.2b6768",
+        "type": "ui_switch",
+        "z": "5ca74b14.4bc484",
+        "name": "",
+        "label": "House Door",
+        "tooltip": "",
+        "group": "8ccd6141.0bd92",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "",
+        "style": "",
+        "onvalue": "unlock",
+        "onvalueType": "str",
+        "onicon": "fa-home",
+        "oncolor": "green",
+        "offvalue": "lock",
+        "offvalueType": "str",
+        "officon": "fa-home",
+        "offcolor": "red",
+        "x": 630,
+        "y": 260,
+        "wires": [
+            [
+                "2aa78365.bf2bac"
+            ]
+        ]
+    },
+    {
+        "id": "cc22e418.c8b6d8",
+        "type": "function",
+        "z": "5ca74b14.4bc484",
+        "name": "toggle",
+        "func": "var current = global.get(\"house_door_state\") || \"unlock\";\n    if(current==\"lock\")\n        msg.payload=\"unlock\";\n    else\n        msg.payload=\"lock\";\n    \n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 550,
+        "y": 200,
+        "wires": [
+            [
+                "2aa78365.bf2bac"
+            ]
+        ]
+    },
+    {
+        "id": "f7a1e6f6.3feb28",
+        "type": "function",
+        "z": "ad37b19c.6e3cf",
+        "name": "Save Light 1",
+        "func": "global.set(\"light_livingroom_1\",msg.payload);\nif(msg.payload==\"on\")\n    msg.payload=1;\nelse\n    msg.payload=0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 330,
+        "y": 260,
+        "wires": [
+            [
+                "8b3a2ecd.1eb22"
+            ]
+        ]
+    },
+    {
+        "id": "a411c84f.e21048",
+        "type": "function",
+        "z": "ad37b19c.6e3cf",
+        "name": "Save Light 2",
+        "func": "global.set(\"light_livingroom_2\",msg.payload);\nif(msg.payload==\"on\")\n    msg.payload=1;\nelse\n    msg.payload=0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 330,
+        "y": 460,
+        "wires": [
+            [
+                "f983e2cf.93acd"
+            ]
+        ]
+    },
+    {
+        "id": "84af828d.de823",
+        "type": "mqtt in",
+        "z": "ad37b19c.6e3cf",
+        "name": "",
+        "topic": "panel/dominik/btn/1",
+        "qos": "0",
+        "broker": "eaefbe14.0c428",
+        "x": 130,
+        "y": 660,
+        "wires": [
+            [
+                "9cfac877.87daa8"
+            ]
+        ]
+    },
+    {
+        "id": "c90db36b.2a1ff",
+        "type": "mqtt out",
+        "z": "ad37b19c.6e3cf",
+        "name": "",
+        "topic": "lights/dominik/1",
+        "qos": "0",
+        "retain": "true",
+        "broker": "eaefbe14.0c428",
+        "x": 820,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "90bfcb3d.4fef78",
+        "type": "function",
+        "z": "ad37b19c.6e3cf",
+        "name": "Save Light Dominik",
+        "func": "global.set(\"light_dominik\",msg.payload);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 330,
+        "y": 780,
+        "wires": [
+            [
+                "49f393e9.1e0b3c"
+            ]
+        ]
+    },
+    {
+        "id": "814303ef.957ff",
+        "type": "ui_slider",
+        "z": "ad37b19c.6e3cf",
+        "name": "",
+        "label": "Light 1",
+        "tooltip": "",
+        "group": "2706f0ba.d3f94",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "end",
+        "topic": "",
+        "min": 0,
+        "max": "255",
+        "step": 1,
+        "x": 510,
+        "y": 720,
+        "wires": [
+            [
+                "c90db36b.2a1ff"
+            ]
+        ]
+    },
+    {
+        "id": "23b1fd5d.5e6112",
+        "type": "mqtt in",
+        "z": "ad37b19c.6e3cf",
+        "name": "",
+        "topic": "lights/dominik/1",
+        "qos": "0",
+        "broker": "eaefbe14.0c428",
+        "x": 120,
+        "y": 760,
+        "wires": [
+            [
+                "90bfcb3d.4fef78",
+                "814303ef.957ff"
+            ]
+        ]
+    },
+    {
+        "id": "9cfac877.87daa8",
+        "type": "function",
+        "z": "ad37b19c.6e3cf",
+        "name": "Toggle",
+        "func": "var current=global.get(\"light_dominik\") || 0;\nif(current>0)\n    msg.payload=0;\nelse\n    msg.payload=255;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 330,
+        "y": 660,
+        "wires": [
+            [
+                "c90db36b.2a1ff"
+            ]
+        ]
+    },
+    {
+        "id": "7d0e1880.9c78c8",
+        "type": "mqtt in",
+        "z": "5ca74b14.4bc484",
+        "name": "",
+        "topic": "panel/dominik/btn/3",
+        "qos": "0",
+        "broker": "eaefbe14.0c428",
+        "x": 150,
+        "y": 520,
+        "wires": [
+            [
+                "59feb9f4.c0ff78"
+            ]
+        ]
+    },
+    {
+        "id": "88b77d5a.78b1a",
+        "type": "function",
+        "z": "5ca74b14.4bc484",
+        "name": "save state",
+        "func": "global.set(\"gate2_state\",msg.payload);\nif(msg.payload==\"close\")\n    msg.payload=1;\nelse\n    msg.payload=0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 620,
+        "wires": [
+            [
+                "ab2db142.98838"
+            ]
+        ]
+    },
+    {
+        "id": "59feb9f4.c0ff78",
+        "type": "function",
+        "z": "5ca74b14.4bc484",
+        "name": "toggle",
+        "func": "var current = global.get(\"gate2_state\") || \"open\";\n    if(current==\"close\")\n        msg.payload=\"open\";\n    else\n        msg.payload=\"close\";\n    \n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 570,
+        "y": 520,
+        "wires": [
+            [
+                "ae06e2f8.66341"
+            ]
+        ]
+    },
+    {
+        "id": "2a221f46.dc051",
+        "type": "mqtt out",
+        "z": "5ca74b14.4bc484",
+        "name": "",
+        "topic": "panel/dominik/gate/2",
+        "qos": "0",
+        "retain": "true",
+        "broker": "eaefbe14.0c428",
+        "x": 960,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "43ef6b66.fa9be4",
+        "type": "ui_switch",
+        "z": "5ca74b14.4bc484",
+        "name": "",
+        "label": "Car Gate",
+        "tooltip": "",
+        "group": "8ccd6141.0bd92",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "",
+        "style": "",
+        "onvalue": "open",
+        "onvalueType": "str",
+        "onicon": "fa-window-minimize",
+        "oncolor": "green",
+        "offvalue": "close",
+        "offvalueType": "str",
+        "officon": "fa-window-maximize",
+        "offcolor": "red",
+        "x": 560,
+        "y": 580,
+        "wires": [
+            [
+                "ae06e2f8.66341"
+            ]
+        ]
+    },
+    {
+        "id": "faf4f93c.0ef928",
+        "type": "mqtt in",
+        "z": "5ca74b14.4bc484",
+        "name": "",
+        "topic": "panel/dominik/gate/2",
+        "qos": "0",
+        "broker": "eaefbe14.0c428",
+        "x": 150,
+        "y": 580,
+        "wires": [
+            [
+                "43ef6b66.fa9be4",
+                "88b77d5a.78b1a",
+                "1cc9642b.66aa4c"
+            ]
+        ]
+    },
+    {
+        "id": "320253dd.b5467c",
+        "type": "inject",
+        "z": "5ca74b14.4bc484",
+        "name": "",
+        "topic": "",
+        "payload": "force",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 750,
+        "y": 460,
+        "wires": [
+            [
+                "2a221f46.dc051"
+            ]
+        ]
+    },
+    {
+        "id": "cc5941c1.8ba58",
+        "type": "mqtt out",
+        "z": "5ca74b14.4bc484",
+        "name": "",
+        "topic": "panel/dominik/gate/1",
+        "qos": "0",
+        "retain": "false",
+        "broker": "eaefbe14.0c428",
+        "x": 820,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "82802809.51db98",
+        "type": "ui_button",
+        "z": "5ca74b14.4bc484",
+        "name": "",
+        "group": "8ccd6141.0bd92",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Gate 1",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "forward_10",
+        "payload": "push",
+        "payloadType": "str",
+        "topic": "",
+        "x": 570,
+        "y": 740,
+        "wires": [
+            [
+                "cc5941c1.8ba58"
+            ]
+        ]
+    },
+    {
+        "id": "ea950fd9.9896d",
+        "type": "mqtt in",
+        "z": "5ca74b14.4bc484",
+        "name": "",
+        "topic": "panel/dominik/btn/2",
+        "qos": "0",
+        "broker": "eaefbe14.0c428",
+        "x": 150,
+        "y": 700,
+        "wires": [
+            [
+                "cc5941c1.8ba58"
+            ]
+        ]
+    },
+    {
+        "id": "de3665e9.f34608",
+        "type": "mqtt in",
+        "z": "6ce645dd.347edc",
+        "name": "",
+        "topic": "panel/dominik/temperature",
+        "qos": "0",
+        "broker": "eaefbe14.0c428",
+        "x": 150,
+        "y": 220,
+        "wires": [
+            [
+                "93f52181.0ded5",
+                "8c1b9227.8defd"
+            ]
+        ]
+    },
+    {
+        "id": "c1e589a2.020b98",
+        "type": "http in",
+        "z": "20b58b0f.00b8b4",
+        "name": "",
+        "url": "/remote/command",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 300,
+        "wires": [
+            [
+                "e4a601e7.df503",
+                "51bb8627.0aed78"
+            ]
+        ]
+    },
+    {
+        "id": "9183ed09.26fec",
+        "type": "http response",
+        "z": "20b58b0f.00b8b4",
+        "name": "Command Response",
+        "statusCode": "",
+        "headers": {},
+        "x": 620,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "e4a601e7.df503",
+        "type": "function",
+        "z": "20b58b0f.00b8b4",
+        "name": "return success",
+        "func": "msg.payload=\"Success\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 420,
+        "y": 300,
+        "wires": [
+            [
+                "9183ed09.26fec"
+            ]
+        ]
+    },
+    {
+        "id": "ade8e7e1.eaad58",
+        "type": "mqtt out",
+        "z": "20b58b0f.00b8b4",
+        "name": "",
+        "topic": "lights/dominik/1",
+        "qos": "0",
+        "retain": "true",
+        "broker": "eaefbe14.0c428",
+        "x": 680,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "51bb8627.0aed78",
+        "type": "switch",
+        "z": "20b58b0f.00b8b4",
+        "name": "",
+        "property": "payload.node",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "light_dominik",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "light_livingroom_1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "light_livingroom_2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "gate1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "gate2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "door_house",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "tablet_screen",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 7,
+        "x": 310,
+        "y": 420,
+        "wires": [
+            [
+                "ac812a.22f07ed8"
+            ],
+            [
+                "9c08d636.7bde58"
+            ],
+            [
+                "e2366b0.d34ab98"
+            ],
+            [
+                "88058bcb.008f48"
+            ],
+            [
+                "df8dd6af.de9e78"
+            ],
+            [
+                "63bf844b.cc9f0c"
+            ],
+            [
+                "a18fa1d2.875de"
+            ]
+        ]
+    },
+    {
+        "id": "ac812a.22f07ed8",
+        "type": "function",
+        "z": "20b58b0f.00b8b4",
+        "name": "",
+        "func": "var pld=msg.payload.action;\nmsg.payload=parseInt(pld);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 400,
+        "wires": [
+            [
+                "ade8e7e1.eaad58"
+            ]
+        ]
+    },
+    {
+        "id": "9c08d636.7bde58",
+        "type": "function",
+        "z": "20b58b0f.00b8b4",
+        "name": "",
+        "func": "var pld=msg.payload.action;\nmsg.payload=pld;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 440,
+        "wires": [
+            [
+                "72facdb4.d8c9b4"
+            ]
+        ]
+    },
+    {
+        "id": "72facdb4.d8c9b4",
+        "type": "mqtt out",
+        "z": "20b58b0f.00b8b4",
+        "name": "",
+        "topic": "lights/livingroom/1",
+        "qos": "0",
+        "retain": "true",
+        "broker": "eaefbe14.0c428",
+        "x": 690,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "e2366b0.d34ab98",
+        "type": "function",
+        "z": "20b58b0f.00b8b4",
+        "name": "",
+        "func": "var pld=msg.payload.action;\nmsg.payload=pld;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 480,
+        "wires": [
+            [
+                "7bcfcf6a.4c27f"
+            ]
+        ]
+    },
+    {
+        "id": "7bcfcf6a.4c27f",
+        "type": "mqtt out",
+        "z": "20b58b0f.00b8b4",
+        "name": "",
+        "topic": "lights/livingroom/2",
+        "qos": "0",
+        "retain": "true",
+        "broker": "eaefbe14.0c428",
+        "x": 690,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "88058bcb.008f48",
+        "type": "function",
+        "z": "20b58b0f.00b8b4",
+        "name": "",
+        "func": "var pld=msg.payload.action;\nmsg.payload=pld;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 520,
+        "wires": [
+            [
+                "570f63.3ee4a09c"
+            ]
+        ]
+    },
+    {
+        "id": "570f63.3ee4a09c",
+        "type": "mqtt out",
+        "z": "20b58b0f.00b8b4",
+        "name": "",
+        "topic": "panel/dominik/gate/1",
+        "qos": "0",
+        "retain": "false",
+        "broker": "eaefbe14.0c428",
+        "x": 700,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "df8dd6af.de9e78",
+        "type": "function",
+        "z": "20b58b0f.00b8b4",
+        "name": "",
+        "func": "var pld=msg.payload.action;\nmsg.payload=pld;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 560,
+        "wires": [
+            [
+                "8647fe87.5354c"
+            ]
+        ]
+    },
+    {
+        "id": "63bf844b.cc9f0c",
+        "type": "function",
+        "z": "20b58b0f.00b8b4",
+        "name": "",
+        "func": "var pld=msg.payload.action;\nmsg.payload=pld;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 600,
+        "wires": [
+            [
+                "a757a6ce.ba9388"
+            ]
+        ]
+    },
+    {
+        "id": "a757a6ce.ba9388",
+        "type": "mqtt out",
+        "z": "20b58b0f.00b8b4",
+        "name": "",
+        "topic": "lock/door/house",
+        "qos": "0",
+        "retain": "true",
+        "broker": "eaefbe14.0c428",
+        "x": 680,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "8e44e469.531f08",
+        "type": "http in",
+        "z": "20b58b0f.00b8b4",
+        "name": "",
+        "url": "/remote/status",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 100,
+        "wires": [
+            [
+                "a0665b68.c5f288"
+            ]
+        ]
+    },
+    {
+        "id": "a0665b68.c5f288",
+        "type": "function",
+        "z": "20b58b0f.00b8b4",
+        "name": "fetch status of all",
+        "func": "var status={};\nstatus.light_dominik=global.get(\"light_dominik\")||0;\nstatus.light_livingroom_1=global.get(\"light_livingroom_1\")||\"off\";\nstatus.light_livingroom_2=global.get(\"light_livingroom_2\")||\"off\";\nstatus.house_door_state=global.get(\"house_door_state\")||\"lock\";\nstatus.gate2_state=global.get(\"gate2_state\")||\"close\";\nmsg.payload=status;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 410,
+        "y": 100,
+        "wires": [
+            [
+                "d74939e2.cd0248"
+            ]
+        ]
+    },
+    {
+        "id": "d74939e2.cd0248",
+        "type": "http response",
+        "z": "20b58b0f.00b8b4",
+        "name": "Status Response",
+        "statusCode": "",
+        "headers": {},
+        "x": 610,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "ae06e2f8.66341",
+        "type": "delay",
+        "z": "5ca74b14.4bc484",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "20",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 740,
+        "y": 520,
+        "wires": [
+            [
+                "2a221f46.dc051"
+            ]
+        ]
+    },
+    {
+        "id": "2276e85d.a2af08",
+        "type": "link in",
+        "z": "5ca74b14.4bc484",
+        "name": "Gate 2",
+        "links": [
+            "d89a5b74.226ae8",
+            "47ede0d2.80fbd",
+            "8647fe87.5354c",
+            "87a83a7c.6f9a98",
+            "4740d080.ce1bd",
+            "83d4d35f.276b7",
+            "66c9e869.a384e8",
+            "82b6b5d6.56c1b8"
+        ],
+        "x": 595,
+        "y": 480,
+        "wires": [
+            [
+                "ae06e2f8.66341"
+            ]
+        ]
+    },
+    {
+        "id": "79df3d45.57d7d4",
+        "type": "mqtt in",
+        "z": "ad37b19c.6e3cf",
+        "name": "Light pot",
+        "topic": "panel/dominik/pot/6",
+        "qos": "0",
+        "broker": "eaefbe14.0c428",
+        "x": 100,
+        "y": 600,
+        "wires": [
+            [
+                "d24255.08d7ada8",
+                "d8830de3.74927"
+            ]
+        ]
+    },
+    {
+        "id": "d24255.08d7ada8",
+        "type": "function",
+        "z": "ad37b19c.6e3cf",
+        "name": "Map pot",
+        "func": "msg.payload=parseInt((1023-msg.payload)*255/1023);\nif(msg.payload<3)msg.payload=0;\nif(msg.payload>252)msg.payload=255;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 260,
+        "y": 600,
+        "wires": [
+            [
+                "c90db36b.2a1ff"
+            ]
+        ]
+    },
+    {
+        "id": "e42ac9b.c893738",
+        "type": "function",
+        "z": "ad37b19c.6e3cf",
+        "name": "Map pot",
+        "func": "msg.payload=parseInt((1023-msg.payload)*255/1023);\nif(msg.payload<3)msg.payload=0;\nif(msg.payload>252)msg.payload=255;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 280,
+        "y": 860,
+        "wires": [
+            [
+                "5a928045.08c2"
+            ]
+        ]
+    },
+    {
+        "id": "f10c8084.866ec",
+        "type": "function",
+        "z": "ad37b19c.6e3cf",
+        "name": "Map pot",
+        "func": "msg.payload=parseInt((1023-msg.payload)*255/1023);\nif(msg.payload<3)msg.payload=0;\nif(msg.payload>252)msg.payload=255;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 280,
+        "y": 960,
+        "wires": [
+            [
+                "e246d96c.6386a8"
+            ]
+        ]
+    },
+    {
+        "id": "d601b452.c9cde8",
+        "type": "function",
+        "z": "ad37b19c.6e3cf",
+        "name": "Map pot",
+        "func": "msg.payload=parseInt((1023-msg.payload)*255/1023);\nif(msg.payload<3)msg.payload=0;\nif(msg.payload>252)msg.payload=255;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 280,
+        "y": 1060,
+        "wires": [
+            [
+                "34c3b2a3.b5094e"
+            ]
+        ]
+    },
+    {
+        "id": "11ab7214.3fed5e",
+        "type": "mqtt in",
+        "z": "ad37b19c.6e3cf",
+        "name": "Red pot",
+        "topic": "panel/dominik/pot/3",
+        "qos": "0",
+        "broker": "eaefbe14.0c428",
+        "x": 90,
+        "y": 860,
+        "wires": [
+            [
+                "e42ac9b.c893738"
+            ]
+        ]
+    },
+    {
+        "id": "fb41f27f.9a5e1",
+        "type": "mqtt in",
+        "z": "ad37b19c.6e3cf",
+        "name": "Green pot",
+        "topic": "panel/dominik/pot/4",
+        "qos": "0",
+        "broker": "eaefbe14.0c428",
+        "x": 100,
+        "y": 960,
+        "wires": [
+            [
+                "f10c8084.866ec"
+            ]
+        ]
+    },
+    {
+        "id": "85245ee0.18339",
+        "type": "mqtt in",
+        "z": "ad37b19c.6e3cf",
+        "name": "Blue pot",
+        "topic": "panel/dominik/pot/5",
+        "qos": "0",
+        "broker": "eaefbe14.0c428",
+        "x": 100,
+        "y": 1060,
+        "wires": [
+            [
+                "d601b452.c9cde8"
+            ]
+        ]
+    },
+    {
+        "id": "5a928045.08c2",
+        "type": "mqtt out",
+        "z": "ad37b19c.6e3cf",
+        "name": "",
+        "topic": "panel/dominik/rgb/red",
+        "qos": "0",
+        "retain": "true",
+        "broker": "eaefbe14.0c428",
+        "x": 840,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "e246d96c.6386a8",
+        "type": "mqtt out",
+        "z": "ad37b19c.6e3cf",
+        "name": "",
+        "topic": "panel/dominik/rgb/green",
+        "qos": "0",
+        "retain": "true",
+        "broker": "eaefbe14.0c428",
+        "x": 850,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "34c3b2a3.b5094e",
+        "type": "mqtt out",
+        "z": "ad37b19c.6e3cf",
+        "name": "",
+        "topic": "panel/dominik/rgb/blue",
+        "qos": "0",
+        "retain": "true",
+        "broker": "eaefbe14.0c428",
+        "x": 840,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "8a1a7043.21d41",
+        "type": "ui_slider",
+        "z": "ad37b19c.6e3cf",
+        "name": "",
+        "label": "RGB Blue",
+        "tooltip": "",
+        "group": "2706f0ba.d3f94",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "end",
+        "topic": "",
+        "min": 0,
+        "max": "255",
+        "step": 1,
+        "x": 520,
+        "y": 1100,
+        "wires": [
+            [
+                "34c3b2a3.b5094e"
+            ]
+        ]
+    },
+    {
+        "id": "d7b60a9a.291218",
+        "type": "ui_slider",
+        "z": "ad37b19c.6e3cf",
+        "name": "",
+        "label": "RGB Green",
+        "tooltip": "",
+        "group": "2706f0ba.d3f94",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "end",
+        "topic": "",
+        "min": 0,
+        "max": "255",
+        "step": 1,
+        "x": 530,
+        "y": 1000,
+        "wires": [
+            [
+                "e246d96c.6386a8"
+            ]
+        ]
+    },
+    {
+        "id": "7cf9d809.f7aac8",
+        "type": "ui_slider",
+        "z": "ad37b19c.6e3cf",
+        "name": "",
+        "label": "RGB Red",
+        "tooltip": "",
+        "group": "2706f0ba.d3f94",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "end",
+        "topic": "",
+        "min": 0,
+        "max": "255",
+        "step": 1,
+        "x": 520,
+        "y": 900,
+        "wires": [
+            [
+                "5a928045.08c2"
+            ]
+        ]
+    },
+    {
+        "id": "6e6f8a1e.809db4",
+        "type": "mqtt in",
+        "z": "ad37b19c.6e3cf",
+        "name": "",
+        "topic": "panel/dominik/rgb/red",
+        "qos": "0",
+        "broker": "eaefbe14.0c428",
+        "x": 140,
+        "y": 900,
+        "wires": [
+            [
+                "7cf9d809.f7aac8"
+            ]
+        ]
+    },
+    {
+        "id": "24f80943.442766",
+        "type": "mqtt in",
+        "z": "ad37b19c.6e3cf",
+        "name": "",
+        "topic": "panel/dominik/rgb/green",
+        "qos": "0",
+        "broker": "eaefbe14.0c428",
+        "x": 140,
+        "y": 1000,
+        "wires": [
+            [
+                "d7b60a9a.291218"
+            ]
+        ]
+    },
+    {
+        "id": "d00e8903.767f68",
+        "type": "mqtt in",
+        "z": "ad37b19c.6e3cf",
+        "name": "",
+        "topic": "panel/dominik/rgb/blue",
+        "qos": "0",
+        "broker": "eaefbe14.0c428",
+        "x": 140,
+        "y": 1100,
+        "wires": [
+            [
+                "8a1a7043.21d41"
+            ]
+        ]
+    },
+    {
+        "id": "c0545fd8.665e6",
+        "type": "inject",
+        "z": "83be0801.deeb68",
+        "name": "",
+        "topic": "",
+        "payload": "TEST",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 110,
+        "y": 60,
+        "wires": [
+            [
+                "fc619523.478b88"
+            ]
+        ]
+    },
+    {
+        "id": "fc619523.478b88",
+        "type": "mqtt out",
+        "z": "83be0801.deeb68",
+        "name": "",
+        "topic": "panel/dominik/lcd",
+        "qos": "0",
+        "retain": "false",
+        "broker": "eaefbe14.0c428",
+        "x": 440,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "fcc0af17.2cdb5",
+        "type": "ui_text_input",
+        "z": "83be0801.deeb68",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "8ccd6141.0bd92",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 120,
+        "y": 120,
+        "wires": [
+            [
+                "fc619523.478b88"
+            ]
+        ]
+    },
+    {
+        "id": "8647fe87.5354c",
+        "type": "link out",
+        "z": "20b58b0f.00b8b4",
+        "name": "Gate 2 REL APP",
+        "links": [
+            "2276e85d.a2af08"
+        ],
+        "x": 615,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "de9672b4.e539c",
+        "type": "link in",
+        "z": "ad37b19c.6e3cf",
+        "name": "RGB Red",
+        "links": [
+            "1ecffd10.6c9ec3",
+            "159786fa.2410f9"
+        ],
+        "x": 675,
+        "y": 840,
+        "wires": [
+            [
+                "5a928045.08c2"
+            ]
+        ]
+    },
+    {
+        "id": "ac59f563.6fb508",
+        "type": "link in",
+        "z": "ad37b19c.6e3cf",
+        "name": "RGB Green",
+        "links": [
+            "f7a2a1dd.89537",
+            "2d748b39.997644"
+        ],
+        "x": 675,
+        "y": 940,
+        "wires": [
+            [
+                "e246d96c.6386a8"
+            ]
+        ]
+    },
+    {
+        "id": "73e419d4.0e8ff8",
+        "type": "link in",
+        "z": "ad37b19c.6e3cf",
+        "name": "RGB Blue",
+        "links": [
+            "e613dce6.339a5"
+        ],
+        "x": 675,
+        "y": 1040,
+        "wires": [
+            [
+                "34c3b2a3.b5094e"
+            ]
+        ]
+    },
+    {
+        "id": "8f040c9e.9e955",
+        "type": "mqtt out",
+        "z": "5ca74b14.4bc484",
+        "name": "",
+        "topic": "lock/door/dominik",
+        "qos": "",
+        "retain": "false",
+        "broker": "eaefbe14.0c428",
+        "x": 820,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "13583f0.fb340c1",
+        "type": "ui_button",
+        "z": "5ca74b14.4bc484",
+        "name": "",
+        "group": "2706f0ba.d3f94",
+        "order": 7,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Lock Door",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "lock",
+        "payloadType": "str",
+        "topic": "",
+        "x": 490,
+        "y": 940,
+        "wires": [
+            [
+                "8f040c9e.9e955"
+            ]
+        ]
+    },
+    {
+        "id": "1df46fb9.66ad5",
+        "type": "ui_button",
+        "z": "5ca74b14.4bc484",
+        "name": "",
+        "group": "2706f0ba.d3f94",
+        "order": 8,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Unlock Door",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "unlock",
+        "payloadType": "str",
+        "topic": "",
+        "x": 490,
+        "y": 980,
+        "wires": [
+            [
+                "8f040c9e.9e955"
+            ]
+        ]
+    },
+    {
+        "id": "7a095010.f8d15",
+        "type": "comment",
+        "z": "ded91b28.b9e3a8",
+        "name": "Status Lights",
+        "info": "",
+        "x": 130,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "ad7d5216.e1eef",
+        "type": "mqtt out",
+        "z": "ded91b28.b9e3a8",
+        "name": "",
+        "topic": "panel/dominik/led/L1",
+        "qos": "0",
+        "retain": "false",
+        "broker": "eaefbe14.0c428",
+        "x": 840,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "bfb25f8c.2e36b",
+        "type": "mqtt out",
+        "z": "ded91b28.b9e3a8",
+        "name": "",
+        "topic": "panel/dominik/led/L2",
+        "qos": "0",
+        "retain": "false",
+        "broker": "eaefbe14.0c428",
+        "x": 840,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "888c8b93.8f8da8",
+        "type": "mqtt out",
+        "z": "ded91b28.b9e3a8",
+        "name": "",
+        "topic": "panel/dominik/led/L3",
+        "qos": "0",
+        "retain": "false",
+        "broker": "eaefbe14.0c428",
+        "x": 840,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "d6d6a2fa.478ea",
+        "type": "mqtt out",
+        "z": "ded91b28.b9e3a8",
+        "name": "",
+        "topic": "panel/dominik/led/L4",
+        "qos": "0",
+        "retain": "false",
+        "broker": "eaefbe14.0c428",
+        "x": 840,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "8bd738fd.1d8678",
+        "type": "mqtt out",
+        "z": "ded91b28.b9e3a8",
+        "name": "",
+        "topic": "panel/dominik/led/L5",
+        "qos": "0",
+        "retain": "false",
+        "broker": "eaefbe14.0c428",
+        "x": 840,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "a753fbb5.892cf8",
+        "type": "mqtt out",
+        "z": "ded91b28.b9e3a8",
+        "name": "",
+        "topic": "panel/dominik/led/R1",
+        "qos": "0",
+        "retain": "false",
+        "broker": "eaefbe14.0c428",
+        "x": 840,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "7ad4e097.e0ab8",
+        "type": "mqtt out",
+        "z": "ded91b28.b9e3a8",
+        "name": "",
+        "topic": "panel/dominik/led/R2",
+        "qos": "0",
+        "retain": "false",
+        "broker": "eaefbe14.0c428",
+        "x": 840,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "e3a3d67c.65a328",
+        "type": "mqtt out",
+        "z": "ded91b28.b9e3a8",
+        "name": "",
+        "topic": "panel/dominik/led/R3",
+        "qos": "0",
+        "retain": "false",
+        "broker": "eaefbe14.0c428",
+        "x": 840,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "198bb902.dffb17",
+        "type": "mqtt out",
+        "z": "ded91b28.b9e3a8",
+        "name": "",
+        "topic": "panel/dominik/led/R4",
+        "qos": "0",
+        "retain": "false",
+        "broker": "eaefbe14.0c428",
+        "x": 840,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "d3f09e53.dd27d",
+        "type": "mqtt out",
+        "z": "ded91b28.b9e3a8",
+        "name": "",
+        "topic": "panel/dominik/led/R5",
+        "qos": "0",
+        "retain": "false",
+        "broker": "eaefbe14.0c428",
+        "x": 840,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "52e02b3.c2dc1d4",
+        "type": "link in",
+        "z": "ded91b28.b9e3a8",
+        "name": "LED L1",
+        "links": [
+            "2785b93.dcff146"
+        ],
+        "x": 155,
+        "y": 140,
+        "wires": [
+            [
+                "39e65ba3.91a1b4"
+            ]
+        ]
+    },
+    {
+        "id": "a0d0548b.beebc8",
+        "type": "link in",
+        "z": "ded91b28.b9e3a8",
+        "name": "LED L2",
+        "links": [
+            "76d74261.6afd7c"
+        ],
+        "x": 155,
+        "y": 180,
+        "wires": [
+            [
+                "b6c91a9d.c9b0d8"
+            ]
+        ]
+    },
+    {
+        "id": "392352f3.9d5c0e",
+        "type": "link in",
+        "z": "ded91b28.b9e3a8",
+        "name": "LED L3",
+        "links": [],
+        "x": 155,
+        "y": 220,
+        "wires": [
+            [
+                "b32e7c78.4fc77"
+            ]
+        ]
+    },
+    {
+        "id": "ef6f62ed.48e16",
+        "type": "link in",
+        "z": "ded91b28.b9e3a8",
+        "name": "LED L4",
+        "links": [],
+        "x": 155,
+        "y": 260,
+        "wires": [
+            [
+                "83e6a30c.7fa7c"
+            ]
+        ]
+    },
+    {
+        "id": "d1a76010.04ceb",
+        "type": "link in",
+        "z": "ded91b28.b9e3a8",
+        "name": "LED L5",
+        "links": [],
+        "x": 155,
+        "y": 300,
+        "wires": [
+            [
+                "6eec62bc.da5eac"
+            ]
+        ]
+    },
+    {
+        "id": "80870598.e49b88",
+        "type": "link in",
+        "z": "ded91b28.b9e3a8",
+        "name": "LED R1",
+        "links": [],
+        "x": 155,
+        "y": 380,
+        "wires": [
+            [
+                "5619c013.6dd33"
+            ]
+        ]
+    },
+    {
+        "id": "9d05f3e4.bfb56",
+        "type": "link in",
+        "z": "ded91b28.b9e3a8",
+        "name": "LED R2",
+        "links": [],
+        "x": 155,
+        "y": 420,
+        "wires": [
+            [
+                "76438f75.30e58"
+            ]
+        ]
+    },
+    {
+        "id": "5f51ec86.46d644",
+        "type": "link in",
+        "z": "ded91b28.b9e3a8",
+        "name": "LED R3",
+        "links": [],
+        "x": 155,
+        "y": 460,
+        "wires": [
+            [
+                "2d4bcdda.31e462"
+            ]
+        ]
+    },
+    {
+        "id": "7d095d7f.3d3ce4",
+        "type": "link in",
+        "z": "ded91b28.b9e3a8",
+        "name": "LED R4",
+        "links": [],
+        "x": 155,
+        "y": 500,
+        "wires": [
+            [
+                "f72d2a9.e6083d8"
+            ]
+        ]
+    },
+    {
+        "id": "efb0e5a.3862118",
+        "type": "link in",
+        "z": "ded91b28.b9e3a8",
+        "name": "LED R5",
+        "links": [],
+        "x": 155,
+        "y": 540,
+        "wires": [
+            [
+                "296cea17.825c06"
+            ]
+        ]
+    },
+    {
+        "id": "74d2a2bc.53a73c",
+        "type": "mqtt in",
+        "z": "ded91b28.b9e3a8",
+        "name": "",
+        "topic": "panel/dominik/sw/1",
+        "qos": "0",
+        "broker": "eaefbe14.0c428",
+        "x": 130,
+        "y": 840,
+        "wires": [
+            [
+                "54cd4b72.5e96a4"
+            ]
+        ]
+    },
+    {
+        "id": "9c203dcf.2bcf9",
+        "type": "function",
+        "z": "ded91b28.b9e3a8",
+        "name": "",
+        "func": "global.set(\"ENABLE_LEDS\",msg.payload);\nif(msg.payload===\"on\")\n    msg.payload=\"update\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 530,
+        "y": 840,
+        "wires": [
+            [
+                "5619c013.6dd33",
+                "76438f75.30e58",
+                "2d4bcdda.31e462",
+                "f72d2a9.e6083d8",
+                "296cea17.825c06",
+                "39e65ba3.91a1b4",
+                "b6c91a9d.c9b0d8",
+                "b32e7c78.4fc77",
+                "83e6a30c.7fa7c",
+                "6eec62bc.da5eac"
+            ]
+        ]
+    },
+    {
+        "id": "5619c013.6dd33",
+        "type": "function",
+        "z": "ded91b28.b9e3a8",
+        "name": "if enabled",
+        "func": "var isEnabled=global.get(\"ENABLE_LEDS\"||\"on\");\nif(isEnabled===\"off\")\n    msg.payload=\"off\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 660,
+        "y": 380,
+        "wires": [
+            [
+                "a753fbb5.892cf8"
+            ]
+        ]
+    },
+    {
+        "id": "54cd4b72.5e96a4",
+        "type": "ui_switch",
+        "z": "ded91b28.b9e3a8",
+        "name": "",
+        "label": "Enable Status LEDs",
+        "tooltip": "",
+        "group": "2706f0ba.d3f94",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 360,
+        "y": 840,
+        "wires": [
+            [
+                "9c203dcf.2bcf9"
+            ]
+        ]
+    },
+    {
+        "id": "76438f75.30e58",
+        "type": "function",
+        "z": "ded91b28.b9e3a8",
+        "name": "if enabled",
+        "func": "var isEnabled=global.get(\"ENABLE_LEDS\"||\"on\");\nif(isEnabled===\"off\")\n    msg.payload=\"off\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 660,
+        "y": 420,
+        "wires": [
+            [
+                "7ad4e097.e0ab8"
+            ]
+        ]
+    },
+    {
+        "id": "2d4bcdda.31e462",
+        "type": "function",
+        "z": "ded91b28.b9e3a8",
+        "name": "if enabled",
+        "func": "var isEnabled=global.get(\"ENABLE_LEDS\"||\"on\");\nif(isEnabled===\"off\")\n    msg.payload=\"off\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 660,
+        "y": 460,
+        "wires": [
+            [
+                "e3a3d67c.65a328"
+            ]
+        ]
+    },
+    {
+        "id": "f72d2a9.e6083d8",
+        "type": "function",
+        "z": "ded91b28.b9e3a8",
+        "name": "if enabled",
+        "func": "var isEnabled=global.get(\"ENABLE_LEDS\"||\"on\");\nif(isEnabled===\"off\")\n    msg.payload=\"off\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 660,
+        "y": 500,
+        "wires": [
+            [
+                "198bb902.dffb17"
+            ]
+        ]
+    },
+    {
+        "id": "296cea17.825c06",
+        "type": "function",
+        "z": "ded91b28.b9e3a8",
+        "name": "if enabled",
+        "func": "var isEnabled=global.get(\"ENABLE_LEDS\"||\"on\");\nif(isEnabled===\"off\")\n    msg.payload=\"off\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 660,
+        "y": 540,
+        "wires": [
+            [
+                "d3f09e53.dd27d"
+            ]
+        ]
+    },
+    {
+        "id": "39e65ba3.91a1b4",
+        "type": "function",
+        "z": "ded91b28.b9e3a8",
+        "name": "if enabled",
+        "func": "var isEnabled=global.get(\"ENABLE_LEDS\"||\"on\");\nif(isEnabled===\"off\")\n    msg.payload=\"off\";\n    \nif(msg.payload==\"update\")\n    msg.payload=(global.get(\"house_door_state\")===\"lock\"?\"on\":\"off\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 660,
+        "y": 140,
+        "wires": [
+            [
+                "ad7d5216.e1eef"
+            ]
+        ]
+    },
+    {
+        "id": "b6c91a9d.c9b0d8",
+        "type": "function",
+        "z": "ded91b28.b9e3a8",
+        "name": "if enabled",
+        "func": "var isEnabled=global.get(\"ENABLE_LEDS\"||\"on\");\nif(isEnabled===\"off\")\n    msg.payload=\"off\";    \nif(msg.payload==\"update\")\n    msg.payload=(global.get(\"gate2_state\")===\"close\"?\"on\":\"off\");\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 660,
+        "y": 180,
+        "wires": [
+            [
+                "bfb25f8c.2e36b"
+            ]
+        ]
+    },
+    {
+        "id": "b32e7c78.4fc77",
+        "type": "function",
+        "z": "ded91b28.b9e3a8",
+        "name": "if enabled",
+        "func": "var isEnabled=global.get(\"ENABLE_LEDS\"||\"on\");\nif(isEnabled===\"off\")\n    msg.payload=\"off\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 660,
+        "y": 220,
+        "wires": [
+            [
+                "888c8b93.8f8da8"
+            ]
+        ]
+    },
+    {
+        "id": "83e6a30c.7fa7c",
+        "type": "function",
+        "z": "ded91b28.b9e3a8",
+        "name": "if enabled",
+        "func": "var isEnabled=global.get(\"ENABLE_LEDS\"||\"on\");\nif(isEnabled===\"off\")\n    msg.payload=\"off\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 660,
+        "y": 260,
+        "wires": [
+            [
+                "d6d6a2fa.478ea"
+            ]
+        ]
+    },
+    {
+        "id": "6eec62bc.da5eac",
+        "type": "function",
+        "z": "ded91b28.b9e3a8",
+        "name": "if enabled",
+        "func": "var isEnabled=global.get(\"ENABLE_LEDS\"||\"on\");\nif(isEnabled===\"off\")\n    msg.payload=\"off\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 660,
+        "y": 300,
+        "wires": [
+            [
+                "8bd738fd.1d8678"
+            ]
+        ]
+    },
+    {
+        "id": "29d84287.c62d0e",
+        "type": "mqtt in",
+        "z": "ded91b28.b9e3a8",
+        "name": "cool btn",
+        "topic": "panel/dominik/sw/5",
+        "qos": "0",
+        "broker": "eaefbe14.0c428",
+        "x": 90,
+        "y": 920,
+        "wires": [
+            [
+                "23bce8e6.b22008"
+            ]
+        ]
+    },
+    {
+        "id": "23bce8e6.b22008",
+        "type": "function",
+        "z": "ded91b28.b9e3a8",
+        "name": "only if light is off/dim",
+        "func": "var lightDominik=global.get(\"light_dominik\")||0;\nif(lightDominik>10)\n    return null;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 360,
+        "y": 920,
+        "wires": [
+            [
+                "cfc2ebb.0d6f118"
+            ]
+        ]
+    },
+    {
+        "id": "cfc2ebb.0d6f118",
+        "type": "mqtt out",
+        "z": "ded91b28.b9e3a8",
+        "name": "",
+        "topic": "panel/dominik/coolkick",
+        "qos": "0",
+        "retain": "false",
+        "broker": "eaefbe14.0c428",
+        "x": 630,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "16a02f87.1eff9",
+        "type": "function",
+        "z": "5ca74b14.4bc484",
+        "name": "to onoff",
+        "func": "if(msg.payload===\"lock\")\n    msg.payload=\"on\";\nelse\n    msg.payload=\"off\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 620,
+        "y": 300,
+        "wires": [
+            [
+                "2785b93.dcff146"
+            ]
+        ]
+    },
+    {
+        "id": "2785b93.dcff146",
+        "type": "link out",
+        "z": "5ca74b14.4bc484",
+        "name": "House Door",
+        "links": [
+            "52e02b3.c2dc1d4"
+        ],
+        "x": 735,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "1cc9642b.66aa4c",
+        "type": "function",
+        "z": "5ca74b14.4bc484",
+        "name": "to onoff",
+        "func": "if(msg.payload===\"close\")\n    msg.payload=\"on\";\nelse\n    msg.payload=\"off\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 340,
+        "y": 560,
+        "wires": [
+            [
+                "76d74261.6afd7c"
+            ]
+        ]
+    },
+    {
+        "id": "76d74261.6afd7c",
+        "type": "link out",
+        "z": "5ca74b14.4bc484",
+        "name": "Gate 2",
+        "links": [
+            "a0d0548b.beebc8"
+        ],
+        "x": 455,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "713ee760.d128c8",
+        "type": "mqtt in",
+        "z": "5ca74b14.4bc484",
+        "name": "",
+        "topic": "panel/dominik/sw/3",
+        "qos": "0",
+        "broker": "eaefbe14.0c428",
+        "x": 180,
+        "y": 880,
+        "wires": [
+            [
+                "a47168c1.933de8"
+            ]
+        ]
+    },
+    {
+        "id": "a47168c1.933de8",
+        "type": "function",
+        "z": "5ca74b14.4bc484",
+        "name": "",
+        "func": "if(msg.payload===\"on\")\n    msg.payload=\"lock\";\nelse\n    msg.payload=\"unlock\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 390,
+        "y": 880,
+        "wires": [
+            [
+                "8f040c9e.9e955"
+            ]
+        ]
+    },
+    {
+        "id": "d0aa3c46.dad56",
+        "type": "link out",
+        "z": "20b58b0f.00b8b4",
+        "name": "APP Tablet Screen",
+        "links": [
+            "95dc0c33.4a932",
+            "d1fbad59.a0523"
+        ],
+        "x": 615,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "a18fa1d2.875de",
+        "type": "function",
+        "z": "20b58b0f.00b8b4",
+        "name": "",
+        "func": "var pld=msg.payload.action;\nmsg.payload=pld;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 640,
+        "wires": [
+            [
+                "d0aa3c46.dad56"
+            ]
+        ]
+    },
+    {
+        "id": "7a1f9f3c.2440e",
+        "type": "inject",
+        "z": "5ca74b14.4bc484",
+        "name": "Lock at midnight",
+        "topic": "",
+        "payload": "lock",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "00 00 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 630,
+        "y": 100,
+        "wires": [
+            [
+                "2aa78365.bf2bac"
+            ]
+        ]
+    },
+    {
+        "id": "afce84e6.eeb3f8",
+        "type": "inject",
+        "z": "5ca74b14.4bc484",
+        "name": "Close at midnight",
+        "topic": "",
+        "payload": "close",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "00 00 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 530,
+        "y": 440,
+        "wires": [
+            [
+                "ae06e2f8.66341"
+            ]
+        ]
+    },
+    {
+        "id": "f28f2fd6.58da1",
+        "type": "debug",
+        "z": "5ca74b14.4bc484",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 400,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "b9c87fd5.0192e",
+        "type": "switch",
+        "z": "5ca74b14.4bc484",
+        "name": "Button select",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "bell",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "panel",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "button",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 330,
+        "y": 200,
+        "wires": [
+            [
+                "7fdc5bf2.48e414"
+            ],
+            [
+                "cc22e418.c8b6d8"
+            ],
+            [
+                "cc22e418.c8b6d8"
+            ]
+        ]
+    },
+    {
+        "id": "e903af88.54f5c",
+        "type": "mqtt in",
+        "z": "ded91b28.b9e3a8",
+        "name": "",
+        "topic": "panel/dominik/sw/4",
+        "qos": "0",
+        "broker": "eaefbe14.0c428",
+        "x": 130,
+        "y": 1020,
+        "wires": [
+            [
+                "d227a67e.dc37d8"
+            ]
+        ]
+    },
+    {
+        "id": "5a7cef8d.a1aea",
+        "type": "link in",
+        "z": "5ca74b14.4bc484",
+        "name": "House Door",
+        "links": [
+            "598ee5a9.4f727c"
+        ],
+        "x": 635,
+        "y": 160,
+        "wires": [
+            [
+                "2aa78365.bf2bac"
+            ]
+        ]
+    },
+    {
+        "id": "598ee5a9.4f727c",
+        "type": "link out",
+        "z": "ded91b28.b9e3a8",
+        "name": "Panel House Door BTN",
+        "links": [
+            "5a7cef8d.a1aea"
+        ],
+        "x": 680,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "d227a67e.dc37d8",
+        "type": "function",
+        "z": "ded91b28.b9e3a8",
+        "name": "",
+        "func": "msg.payload=(msg.payload==\"on\")?\"lock\":\"unlock\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 1020,
+        "wires": [
+            [
+                "598ee5a9.4f727c"
+            ]
+        ]
+    },
+    {
+        "id": "7fdc5bf2.48e414",
+        "type": "link out",
+        "z": "5ca74b14.4bc484",
+        "name": "House Door BELL",
+        "links": [
+            "c2a4c813.76fd48",
+            "973fbd2c.d997d",
+            "261cc4bf.a8b60c"
+        ],
+        "x": 455,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "93f52181.0ded5",
+        "type": "ui_gauge",
+        "z": "6ce645dd.347edc",
+        "name": "Dominik room temperature",
+        "group": "2706f0ba.d3f94",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "30",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 440,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "8c1b9227.8defd",
+        "type": "ui_chart",
+        "z": "6ce645dd.347edc",
+        "name": "",
+        "group": "8474ad06.8594",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature - Dominik",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "bezier",
+        "nodata": "---waiting---",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 420,
+        "y": 220,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "49f393e9.1e0b3c",
+        "type": "ui_chart",
+        "z": "ad37b19c.6e3cf",
+        "name": "",
+        "group": "8474ad06.8594",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Light Stats",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "step",
+        "nodata": "---waiting---",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "255",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 530,
+        "y": 800,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f983e2cf.93acd",
+        "type": "ui_chart",
+        "z": "ad37b19c.6e3cf",
+        "name": "",
+        "group": "c9090456.25cf88",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Light 2 Stats",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "step",
+        "nodata": "---waiting---",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 530,
+        "y": 500,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "8b3a2ecd.1eb22",
+        "type": "ui_chart",
+        "z": "ad37b19c.6e3cf",
+        "name": "",
+        "group": "c9090456.25cf88",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Light 1 Stats",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "step",
+        "nodata": "---waiting---",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 520,
+        "y": 300,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ab2db142.98838",
+        "type": "ui_chart",
+        "z": "5ca74b14.4bc484",
+        "name": "Gate Closed Stats",
+        "group": "c0cb2341.025c6",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "label": "Gate Closed Stats",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "step",
+        "nodata": "---waiting---",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 530,
+        "y": 640,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e0bd2ffb.61e73",
+        "type": "ui_chart",
+        "z": "5ca74b14.4bc484",
+        "name": "Door Locked Stats",
+        "group": "c0cb2341.025c6",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "label": "Door Locked Stats",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "step",
+        "nodata": "---waiting---",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 530,
+        "y": 340,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "d9105f5a.f2c38",
+        "type": "ui_colour_picker",
+        "z": "83be0801.deeb68",
+        "name": "",
+        "label": "",
+        "group": "2706f0ba.d3f94",
+        "format": "rgb",
+        "outformat": "string",
+        "showSwatch": false,
+        "showPicker": true,
+        "showValue": false,
+        "showHue": true,
+        "showAlpha": false,
+        "showLightness": true,
+        "dynOutput": "false",
+        "order": 6,
+        "width": "0",
+        "height": "0",
+        "passthru": true,
+        "topic": "",
+        "x": 150,
+        "y": 340,
+        "wires": [
+            [
+                "dcd1e176.3e4f3"
+            ]
+        ]
+    },
+    {
+        "id": "dcd1e176.3e4f3",
+        "type": "function",
+        "z": "83be0801.deeb68",
+        "name": "extract rgb",
+        "func": "// pull the r, g, b string values out\nvar rgb = msg.payload.match(/(\\d+)/gi);\n\n// convert each value to a percentage\nvar pwm = rgb.map(h => Math.round(100*h/255));\n\n// return an object with named properties\nmsg.payload = {\n    r: pwm[0],\n    g: pwm[1],\n    b: pwm[2]\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 320,
+        "y": 420,
+        "wires": [
+            [
+                "b5da8760.809ca8",
+                "a4802009.f6634",
+                "b86bca63.85df78"
+            ]
+        ]
+    },
+    {
+        "id": "b5da8760.809ca8",
+        "type": "change",
+        "z": "83be0801.deeb68",
+        "name": "red",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.r",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 400,
+        "wires": [
+            [
+                "159786fa.2410f9"
+            ]
+        ]
+    },
+    {
+        "id": "159786fa.2410f9",
+        "type": "link out",
+        "z": "83be0801.deeb68",
+        "name": "Color Picker Red",
+        "links": [
+            "de9672b4.e539c"
+        ],
+        "x": 690,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "a4802009.f6634",
+        "type": "change",
+        "z": "83be0801.deeb68",
+        "name": "green",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.g",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 440,
+        "wires": [
+            [
+                "2d748b39.997644"
+            ]
+        ]
+    },
+    {
+        "id": "2d748b39.997644",
+        "type": "link out",
+        "z": "83be0801.deeb68",
+        "name": "Color Picker Green",
+        "links": [
+            "ac59f563.6fb508"
+        ],
+        "x": 690,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "b86bca63.85df78",
+        "type": "change",
+        "z": "83be0801.deeb68",
+        "name": "blue",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.r",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 480,
+        "wires": [
+            [
+                "e613dce6.339a5"
+            ]
+        ]
+    },
+    {
+        "id": "e613dce6.339a5",
+        "type": "link out",
+        "z": "83be0801.deeb68",
+        "name": "Color Picker Blue",
+        "links": [
+            "73e419d4.0e8ff8"
+        ],
+        "x": 690,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "d8830de3.74927",
+        "type": "debug",
+        "z": "ad37b19c.6e3cf",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 320,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "4c575cea.806fc4",
+        "type": "comment",
+        "z": "ded91b28.b9e3a8",
+        "name": "Panel SW4 house door lock",
+        "info": "",
+        "x": 160,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "fd0adfe1.94282",
+        "type": "comment",
+        "z": "5ca74b14.4bc484",
+        "name": "SW3 Room Door Lock",
+        "info": "",
+        "x": 180,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "42a17301.7d866c",
+        "type": "mqtt in",
+        "z": "ded91b28.b9e3a8",
+        "name": "",
+        "topic": "panel/dominik/btn/bell",
+        "qos": "0",
+        "broker": "eaefbe14.0c428",
+        "x": 220,
+        "y": 1240,
+        "wires": [
+            [
+                "848268e0.359238"
+            ]
+        ]
+    },
+    {
+        "id": "17f517ee.b7b238",
+        "type": "mqtt out",
+        "z": "ded91b28.b9e3a8",
+        "name": "",
+        "topic": "panel/dominik/bell",
+        "qos": "",
+        "retain": "",
+        "broker": "eaefbe14.0c428",
+        "x": 730,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "7d677c50.e8fca4",
+        "type": "ui_toast",
+        "z": "ded91b28.b9e3a8",
+        "position": "top right",
+        "displayTime": "10",
+        "highlight": "",
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "topic": "",
+        "name": "Bell Notification",
+        "x": 720,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "7c60aa2e.6988d4",
+        "type": "comment",
+        "z": "ded91b28.b9e3a8",
+        "name": "OUTSIDE BELL",
+        "info": "",
+        "x": 120,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "973fbd2c.d997d",
+        "type": "link in",
+        "z": "ded91b28.b9e3a8",
+        "name": "bell link",
+        "links": [
+            "7fdc5bf2.48e414"
+        ],
+        "x": 294,
+        "y": 1199,
+        "wires": [
+            [
+                "848268e0.359238"
+            ]
+        ]
+    },
+    {
+        "id": "848268e0.359238",
+        "type": "function",
+        "z": "ded91b28.b9e3a8",
+        "name": "",
+        "func": "msg.topic=(msg.topic==\"panel/dominik/btn/bell\")?\"GATE BELL\":\"HOUSE DOOR BELL\";\nmsg.payload=\"Someone's at the door!\";\nif(global.get(\"ENABLE_OUTSIDE_BELL\",true) == false)\n    return null;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 1240,
+        "wires": [
+            [
+                "7d677c50.e8fca4",
+                "d467738f.e0f79",
+                "17f517ee.b7b238"
+            ]
+        ]
+    },
+    {
+        "id": "d467738f.e0f79",
+        "type": "debug",
+        "z": "ded91b28.b9e3a8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 720,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "f9ca3d52.64524",
+        "type": "ui_switch",
+        "z": "ded91b28.b9e3a8",
+        "name": "",
+        "label": "Enable Outside Bell",
+        "tooltip": "",
+        "group": "8ccd6141.0bd92",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 290,
+        "y": 1320,
+        "wires": [
+            [
+                "a798b314.c43d9"
+            ]
+        ]
+    },
+    {
+        "id": "a798b314.c43d9",
+        "type": "function",
+        "z": "ded91b28.b9e3a8",
+        "name": "",
+        "func": "global.set(\"ENABLE_OUTSIDE_BELL\",msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fc7f26e8.a40bb8",
+        "type": "function",
+        "z": "83be0801.deeb68",
+        "name": "to onoff",
+        "func": "if(msg.payload===\"away\")\n    msg.payload=\"off\";\nelse\n    msg.payload=\"on\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 520,
+        "y": 1460,
+        "wires": [
+            [
+                "295d0452.99b40c"
+            ]
+        ]
+    },
+    {
+        "id": "fdc3aad0.ac5a28",
+        "type": "function",
+        "z": "83be0801.deeb68",
+        "name": "Change/Save",
+        "func": "var lastState=global.get(\"PING_HRVOJE_LAST\")||\"away\";\n\nif(msg.payload===\"update\"){\n    msg.color=(lastState==\"away\")?\"red\":\"green\";  \n    msg.payload=lastState;\n    return msg;\n}\n\nvar currentState=(msg.payload===false)?\"away\":\"home\";\nglobal.set(\"PING_HRVOJE_LAST\",currentState);\nif(lastState==currentState)\n    return null;\n\nmsg.color=(currentState==\"away\")?\"red\":\"green\";      \nmsg.payload=currentState;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 320,
+        "y": 1380,
+        "wires": [
+            [
+                "70441026.dfa9c",
+                "e34bb3b2.7f8f6",
+                "fc7f26e8.a40bb8"
+            ]
+        ]
+    },
+    {
+        "id": "295d0452.99b40c",
+        "type": "link out",
+        "z": "83be0801.deeb68",
+        "name": "Hrvoje Home",
+        "links": [],
+        "x": 635,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "4a3ed33d.f5f11c",
+        "type": "ping",
+        "z": "83be0801.deeb68",
+        "name": "PING Hrvoje",
+        "host": "192.168.1.105",
+        "timer": "60",
+        "x": 130,
+        "y": 1380,
+        "wires": [
+            [
+                "fdc3aad0.ac5a28"
+            ]
+        ]
+    },
+    {
+        "id": "70441026.dfa9c",
+        "type": "ui_text",
+        "z": "83be0801.deeb68",
+        "group": "3153cc39.9368f4",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Hrvoje",
+        "format": "<font color= {{msg.color}} > {{msg.payload}} </font>",
+        "layout": "row-spread",
+        "x": 510,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "e34bb3b2.7f8f6",
+        "type": "delay",
+        "z": "83be0801.deeb68",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 520,
+        "y": 1380,
+        "wires": [
+            [
+                "9a57d22a.d77fc"
+            ]
+        ]
+    },
+    {
+        "id": "6c24cdfe.ea2ad4",
+        "type": "inject",
+        "z": "83be0801.deeb68",
+        "name": "Manual update",
+        "topic": "",
+        "payload": "update",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 140,
+        "y": 920,
+        "wires": [
+            [
+                "de936051.e175d",
+                "355c58e3.fc3538",
+                "e22e5c13.dff43",
+                "444d6127.39cf4",
+                "fdc3aad0.ac5a28"
+            ]
+        ]
+    },
+    {
+        "id": "9a57d22a.d77fc",
+        "type": "switch",
+        "z": "83be0801.deeb68",
+        "name": "is home?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "away",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "home",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 680,
+        "y": 1380,
+        "wires": [
+            [
+                "93fcd86b.ab7018"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "de936051.e175d",
+        "type": "function",
+        "z": "83be0801.deeb68",
+        "name": "Change/Save",
+        "func": "var lastState=global.get(\"PING_IGOR_LAST\")||\"away\";\n\nif(msg.payload===\"update\"){\n    msg.payload=lastState;\n    msg.color=(lastState==\"away\")?\"red\":\"green\";  \n    return msg;\n}\n    \nvar currentState=(msg.payload===false)?\"away\":\"home\";\nglobal.set(\"PING_IGOR_LAST\",currentState);\nif(lastState==currentState)\n    return null;\n    \nmsg.color=(currentState==\"away\")?\"red\":\"green\";  \nmsg.payload=currentState;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 320,
+        "y": 1020,
+        "wires": [
+            [
+                "3f24e336.f3c42c",
+                "fd24bfeb.8566",
+                "66656349.6457ec"
+            ]
+        ]
+    },
+    {
+        "id": "355c58e3.fc3538",
+        "type": "function",
+        "z": "83be0801.deeb68",
+        "name": "Change/Save",
+        "func": "var lastState=global.get(\"PING_DOMINIK_LAST\")||\"away\";\n\nif(msg.payload===\"update\"){\n    msg.payload=lastState;\n    msg.color=(lastState==\"away\")?\"red\":\"green\";\n    return msg;\n}\n\nvar currentState=(msg.payload===false)?\"away\":\"home\";\nglobal.set(\"PING_DOMINIK_LAST\",currentState);\nif(lastState==currentState)\n    return null;\n    \nmsg.color=(currentState==\"away\")?\"red\":\"green\";   \nmsg.payload=currentState;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 320,
+        "y": 620,
+        "wires": [
+            [
+                "343323ad.eb701c",
+                "72822585.5efaac",
+                "f2149569.594b68"
+            ]
+        ]
+    },
+    {
+        "id": "e22e5c13.dff43",
+        "type": "function",
+        "z": "83be0801.deeb68",
+        "name": "Change/Save",
+        "func": "var lastState=global.get(\"PING_KRISTINA_LAST\")||\"away\";\n\nif(msg.payload===\"update\"){\n    msg.color=(lastState==\"away\")?\"red\":\"green\";  \n    msg.payload=lastState;\n    return msg;\n}\n\nvar currentState=(msg.payload===false)?\"away\":\"home\";\nglobal.set(\"PING_KRISTINA_LAST\",currentState);\nif(lastState==currentState)\n    return null;\nmsg.color=(currentState==\"away\")?\"red\":\"green\";     \nmsg.payload=currentState;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 320,
+        "y": 1140,
+        "wires": [
+            [
+                "3d40805b.e0eed",
+                "2bf48fe9.b2e0d",
+                "707610ce.13b24"
+            ]
+        ]
+    },
+    {
+        "id": "444d6127.39cf4",
+        "type": "function",
+        "z": "83be0801.deeb68",
+        "name": "Change/Save",
+        "func": "var lastState=global.get(\"PING_MARKO_LAST\")||\"away\";\n\nif(msg.payload===\"update\"){\n    msg.color=(lastState==\"away\")?\"red\":\"green\";  \n    msg.payload=lastState;\n    return msg;\n}\n\nvar currentState=(msg.payload===false)?\"away\":\"home\";\nglobal.set(\"PING_MARKO_LAST\",currentState);\nif(lastState==currentState)\n    return null;\n    \nmsg.color=(currentState==\"away\")?\"red\":\"green\";  \nmsg.payload=currentState;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 320,
+        "y": 1260,
+        "wires": [
+            [
+                "510ef089.48261",
+                "df3de3d6.2fb47",
+                "4004179d.2e83b8"
+            ]
+        ]
+    },
+    {
+        "id": "93fcd86b.ab7018",
+        "type": "function",
+        "z": "83be0801.deeb68",
+        "name": "Everyone Away",
+        "func": "if((global.get(\"PING_IGOR_LAST\")||\"home\")==\"away\"&&(global.get(\"PING_KRISTINA_LAST\")||\"home\")==\"away\"&&(global.get(\"PING_DOMINIK_LAST\")||\"home\")==\"away\"&&(global.get(\"PING_MARKO_LAST\")|\"home\")==\"away\"&&(global.get(\"PING_HRVOJE_LAST\")||\"home\")==\"away\"){\n    return msg;\n} else{\n    return null;\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1040,
+        "y": 1200,
+        "wires": [
+            [
+                "b107325c.cc0c",
+                "e689ea2f.2ee498"
+            ]
+        ]
+    },
+    {
+        "id": "37c11dc1.a9ddc2",
+        "type": "ping",
+        "z": "83be0801.deeb68",
+        "name": "PING Igor",
+        "host": "192.168.1.101",
+        "timer": "60",
+        "x": 120,
+        "y": 1020,
+        "wires": [
+            [
+                "de936051.e175d"
+            ]
+        ]
+    },
+    {
+        "id": "3f24e336.f3c42c",
+        "type": "ui_text",
+        "z": "83be0801.deeb68",
+        "group": "3153cc39.9368f4",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Igor",
+        "format": "<font color= {{msg.color}} > {{msg.payload}} </font>",
+        "layout": "row-spread",
+        "x": 510,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "fd24bfeb.8566",
+        "type": "delay",
+        "z": "83be0801.deeb68",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 520,
+        "y": 1020,
+        "wires": [
+            [
+                "e9ca537c.9f779"
+            ]
+        ]
+    },
+    {
+        "id": "66656349.6457ec",
+        "type": "function",
+        "z": "83be0801.deeb68",
+        "name": "to onoff",
+        "func": "if(msg.payload===\"away\")\n    msg.payload=\"off\";\nelse\n    msg.payload=\"on\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 520,
+        "y": 1100,
+        "wires": [
+            [
+                "402e7b2.8222784"
+            ]
+        ]
+    },
+    {
+        "id": "84d9e03f.ac086",
+        "type": "ping",
+        "z": "83be0801.deeb68",
+        "name": "PING Dominik",
+        "host": "192.168.1.103",
+        "timer": "60",
+        "x": 110,
+        "y": 620,
+        "wires": [
+            [
+                "355c58e3.fc3538"
+            ]
+        ]
+    },
+    {
+        "id": "343323ad.eb701c",
+        "type": "ui_text",
+        "z": "83be0801.deeb68",
+        "group": "3153cc39.9368f4",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Dominik",
+        "format": "<font color= {{msg.color}} > {{msg.payload}} </font>",
+        "layout": "row-spread",
+        "x": 520,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "72822585.5efaac",
+        "type": "delay",
+        "z": "83be0801.deeb68",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 540,
+        "y": 660,
+        "wires": [
+            [
+                "bcd075ce.e89b28"
+            ]
+        ]
+    },
+    {
+        "id": "f2149569.594b68",
+        "type": "function",
+        "z": "83be0801.deeb68",
+        "name": "to onoff",
+        "func": "if(msg.payload===\"away\")\n    msg.payload=\"off\";\nelse\n    msg.payload=\"on\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 520,
+        "y": 560,
+        "wires": [
+            [
+                "6664e9be.05ea18"
+            ]
+        ]
+    },
+    {
+        "id": "e2db0ac4.b919a8",
+        "type": "ping",
+        "z": "83be0801.deeb68",
+        "name": "PING Kristina",
+        "host": "192.168.1.102",
+        "timer": "60",
+        "x": 130,
+        "y": 1140,
+        "wires": [
+            [
+                "e22e5c13.dff43"
+            ]
+        ]
+    },
+    {
+        "id": "3d40805b.e0eed",
+        "type": "ui_text",
+        "z": "83be0801.deeb68",
+        "group": "3153cc39.9368f4",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Kristina",
+        "format": "<font color= {{msg.color}} > {{msg.payload}} </font>",
+        "layout": "row-spread",
+        "x": 520,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "2bf48fe9.b2e0d",
+        "type": "delay",
+        "z": "83be0801.deeb68",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 520,
+        "y": 1140,
+        "wires": [
+            [
+                "83419118.811e1"
+            ]
+        ]
+    },
+    {
+        "id": "707610ce.13b24",
+        "type": "function",
+        "z": "83be0801.deeb68",
+        "name": "to onoff",
+        "func": "if(msg.payload===\"away\")\n    msg.payload=\"off\";\nelse\n    msg.payload=\"on\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 520,
+        "y": 1220,
+        "wires": [
+            [
+                "f4c2b25c.f7c42"
+            ]
+        ]
+    },
+    {
+        "id": "6534707e.08509",
+        "type": "ping",
+        "z": "83be0801.deeb68",
+        "name": "PING Marko",
+        "host": "192.168.1.104",
+        "timer": "60",
+        "x": 130,
+        "y": 1260,
+        "wires": [
+            [
+                "444d6127.39cf4"
+            ]
+        ]
+    },
+    {
+        "id": "510ef089.48261",
+        "type": "ui_text",
+        "z": "83be0801.deeb68",
+        "group": "3153cc39.9368f4",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Marko",
+        "format": "<font color= {{msg.color}} > {{msg.payload}} </font>",
+        "layout": "row-spread",
+        "x": 510,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "df3de3d6.2fb47",
+        "type": "delay",
+        "z": "83be0801.deeb68",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 520,
+        "y": 1260,
+        "wires": [
+            [
+                "5f800a6a.b87ac4"
+            ]
+        ]
+    },
+    {
+        "id": "4004179d.2e83b8",
+        "type": "function",
+        "z": "83be0801.deeb68",
+        "name": "to onoff",
+        "func": "if(msg.payload===\"away\")\n    msg.payload=\"off\";\nelse\n    msg.payload=\"on\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 520,
+        "y": 1340,
+        "wires": [
+            [
+                "6f9be62c.9c20f8"
+            ]
+        ]
+    },
+    {
+        "id": "b107325c.cc0c",
+        "type": "link out",
+        "z": "83be0801.deeb68",
+        "name": "Everyone Left",
+        "links": [
+            "36cc76b9.89180a",
+            "ee7b1a98.a90038"
+        ],
+        "x": 1255,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "e689ea2f.2ee498",
+        "type": "debug",
+        "z": "83be0801.deeb68",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1310,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "e9ca537c.9f779",
+        "type": "switch",
+        "z": "83be0801.deeb68",
+        "name": "is home?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "away",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "home",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 680,
+        "y": 1020,
+        "wires": [
+            [
+                "93fcd86b.ab7018"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "83419118.811e1",
+        "type": "switch",
+        "z": "83be0801.deeb68",
+        "name": "is home?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "away",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "home",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 680,
+        "y": 1140,
+        "wires": [
+            [
+                "93fcd86b.ab7018"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "5f800a6a.b87ac4",
+        "type": "switch",
+        "z": "83be0801.deeb68",
+        "name": "is home?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "away",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "home",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 680,
+        "y": 1260,
+        "wires": [
+            [
+                "93fcd86b.ab7018"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "402e7b2.8222784",
+        "type": "link out",
+        "z": "83be0801.deeb68",
+        "name": "Igor Home",
+        "links": [],
+        "x": 635,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "bcd075ce.e89b28",
+        "type": "switch",
+        "z": "83be0801.deeb68",
+        "name": "is home?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "away",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "home",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 700,
+        "y": 720,
+        "wires": [
+            [
+                "4a3c984e.0400d8"
+            ],
+            [
+                "9ba4d77c.6bd2d8",
+                "8eb5aebe.cc5d1"
+            ]
+        ]
+    },
+    {
+        "id": "6664e9be.05ea18",
+        "type": "link out",
+        "z": "83be0801.deeb68",
+        "name": "Dominik Home",
+        "links": [],
+        "x": 635,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "f4c2b25c.f7c42",
+        "type": "link out",
+        "z": "83be0801.deeb68",
+        "name": "Kristina Home",
+        "links": [],
+        "x": 635,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "6f9be62c.9c20f8",
+        "type": "link out",
+        "z": "83be0801.deeb68",
+        "name": "Marko Home",
+        "links": [],
+        "x": 635,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "4a3c984e.0400d8",
+        "type": "function",
+        "z": "83be0801.deeb68",
+        "name": "off(0)",
+        "func": "msg.payload=0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 850,
+        "y": 700,
+        "wires": [
+            [
+                "3f8e6e55.feac02"
+            ]
+        ]
+    },
+    {
+        "id": "9ba4d77c.6bd2d8",
+        "type": "function",
+        "z": "83be0801.deeb68",
+        "name": "unlock",
+        "func": "global.set(\"HOUSE_DOOR_STATE_LAST\",global.get(\"house_door_state\"));\nmsg.payload=\"unlock\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 850,
+        "y": 780,
+        "wires": [
+            [
+                "6d53dfb9.633ba"
+            ]
+        ]
+    },
+    {
+        "id": "8eb5aebe.cc5d1",
+        "type": "function",
+        "z": "83be0801.deeb68",
+        "name": "open",
+        "func": "msg.payload=\"open\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 850,
+        "y": 740,
+        "wires": [
+            [
+                "955c1f8f.6db2"
+            ]
+        ]
+    },
+    {
+        "id": "3f8e6e55.feac02",
+        "type": "mqtt out",
+        "z": "83be0801.deeb68",
+        "name": "",
+        "topic": "lights/dominik/1",
+        "qos": "0",
+        "retain": "true",
+        "broker": "eaefbe14.0c428",
+        "x": 1000,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "6d53dfb9.633ba",
+        "type": "delay",
+        "z": "83be0801.deeb68",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1000,
+        "y": 780,
+        "wires": [
+            [
+                "ca74fa65.2c17e8",
+                "cd3e8724.5f5c48"
+            ]
+        ]
+    },
+    {
+        "id": "955c1f8f.6db2",
+        "type": "delay",
+        "z": "83be0801.deeb68",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1000,
+        "y": 740,
+        "wires": [
+            [
+                "4740d080.ce1bd"
+            ]
+        ]
+    },
+    {
+        "id": "ca74fa65.2c17e8",
+        "type": "debug",
+        "z": "83be0801.deeb68",
+        "name": "unlock debuck",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 1440,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "cd3e8724.5f5c48",
+        "type": "delay",
+        "z": "83be0801.deeb68",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1160,
+        "y": 800,
+        "wires": [
+            [
+                "4d6891e.4c6097"
+            ]
+        ]
+    },
+    {
+        "id": "4740d080.ce1bd",
+        "type": "link out",
+        "z": "83be0801.deeb68",
+        "name": "Gate 2 REL1",
+        "links": [
+            "2276e85d.a2af08"
+        ],
+        "x": 1175,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "4d6891e.4c6097",
+        "type": "function",
+        "z": "83be0801.deeb68",
+        "name": "relock",
+        "func": "msg.payload=global.get(\"HOUSE_DOOR_STATE_LAST\");\nif(msg.payload==\"unlock\")\n    return null;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1290,
+        "y": 800,
+        "wires": [
+            [
+                "ca74fa65.2c17e8"
+            ]
+        ]
+    },
+    {
+        "id": "ee7b1a98.a90038",
+        "type": "link in",
+        "z": "83be0801.deeb68",
+        "name": "Everyone Left",
+        "links": [
+            "c747912b.59ec9",
+            "b107325c.cc0c"
+        ],
+        "x": 195,
+        "y": 1640,
+        "wires": [
+            [
+                "ee48a132.d9425"
+            ]
+        ]
+    },
+    {
+        "id": "ee48a132.d9425",
+        "type": "delay",
+        "z": "83be0801.deeb68",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "10",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 310,
+        "y": 1640,
+        "wires": [
+            [
+                "7029401f.9c11b"
+            ]
+        ]
+    },
+    {
+        "id": "bfe1357f.e53ca8",
+        "type": "function",
+        "z": "83be0801.deeb68",
+        "name": "lock",
+        "func": "msg.payload=\"lock\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 690,
+        "y": 1600,
+        "wires": [
+            [
+                "51597c02.9027e4"
+            ]
+        ]
+    },
+    {
+        "id": "51597c02.9027e4",
+        "type": "mqtt out",
+        "z": "83be0801.deeb68",
+        "name": "",
+        "topic": "lock/door/house",
+        "qos": "0",
+        "retain": "true",
+        "broker": "eaefbe14.0c428",
+        "x": 880,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "d4145275.84c43",
+        "type": "mqtt out",
+        "z": "83be0801.deeb68",
+        "name": "",
+        "topic": "lights/dominik/1",
+        "qos": "0",
+        "retain": "true",
+        "broker": "eaefbe14.0c428",
+        "x": 880,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "4aa233a0.941cbc",
+        "type": "function",
+        "z": "83be0801.deeb68",
+        "name": "off",
+        "func": "msg.payload=\"off\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 690,
+        "y": 1680,
+        "wires": [
+            [
+                "c20b326.211a4d",
+                "e2afc948.782598"
+            ]
+        ]
+    },
+    {
+        "id": "c20b326.211a4d",
+        "type": "mqtt out",
+        "z": "83be0801.deeb68",
+        "name": "",
+        "topic": "lights/livingroom/1",
+        "qos": "0",
+        "retain": "true",
+        "broker": "eaefbe14.0c428",
+        "x": 890,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "e2afc948.782598",
+        "type": "mqtt out",
+        "z": "83be0801.deeb68",
+        "name": "",
+        "topic": "lights/livingroom/2",
+        "qos": "0",
+        "retain": "true",
+        "broker": "eaefbe14.0c428",
+        "x": 890,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "2307479b.ed8dc8",
+        "type": "function",
+        "z": "83be0801.deeb68",
+        "name": "off(0)",
+        "func": "msg.payload=0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 690,
+        "y": 1640,
+        "wires": [
+            [
+                "d4145275.84c43"
+            ]
+        ]
+    },
+    {
+        "id": "5ca8253a.a4ee3c",
+        "type": "function",
+        "z": "83be0801.deeb68",
+        "name": "close",
+        "func": "msg.payload=\"close\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 690,
+        "y": 1760,
+        "wires": [
+            [
+                "83d4d35f.276b7"
+            ]
+        ]
+    },
+    {
+        "id": "7029401f.9c11b",
+        "type": "function",
+        "z": "83be0801.deeb68",
+        "name": "Everyone Still Away",
+        "func": "if((global.get(\"PING_IGOR_LAST\")||\"home\")==\"away\"&&(global.get(\"PING_KRISTINA_LAST\")||\"home\")==\"away\"&&(global.get(\"PING_DOMINIK_LAST\")||\"home\")==\"away\"&&(global.get(\"PING_MARKO_LAST\")|\"home\")==\"away\"&&(global.get(\"PING_HRVOJE_LAST\")||\"home\")==\"away\"){\n    return msg;\n} else{\n    return null;\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 1640,
+        "wires": [
+            [
+                "bfe1357f.e53ca8",
+                "2307479b.ed8dc8",
+                "4aa233a0.941cbc",
+                "5ca8253a.a4ee3c"
+            ]
+        ]
+    },
+    {
+        "id": "83d4d35f.276b7",
+        "type": "link out",
+        "z": "83be0801.deeb68",
+        "name": "Gate 2 REL2",
+        "links": [
+            "2276e85d.a2af08"
+        ],
+        "x": 860,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "dcd7367e.e01198",
+        "type": "inject",
+        "z": "6ce645dd.347edc",
+        "name": "Off at 1AM",
+        "topic": "",
+        "payload": "off",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "00 01 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 150,
+        "y": 520,
+        "wires": [
+            [
+                "4e64ef5f.0c735"
+            ]
+        ]
+    },
+    {
+        "id": "4e64ef5f.0c735",
+        "type": "ui_switch",
+        "z": "6ce645dd.347edc",
+        "name": "",
+        "label": "Smart Mirror / Photo Frame",
+        "tooltip": "",
+        "group": "6f2503eb.31960c",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 420,
+        "y": 540,
+        "wires": [
+            [
+                "9db5abdd.6c9508"
+            ]
+        ]
+    },
+    {
+        "id": "22540f62.acea",
+        "type": "exec",
+        "z": "6ce645dd.347edc",
+        "command": "xset -display :0.0 dpms force ",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "5",
+        "oldrc": false,
+        "name": "Turn Screen On / Off",
+        "x": 820,
+        "y": 540,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f524af32.33cd8",
+        "type": "inject",
+        "z": "6ce645dd.347edc",
+        "name": "On at 7AM",
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "00 07 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 150,
+        "y": 560,
+        "wires": [
+            [
+                "4e64ef5f.0c735"
+            ]
+        ]
+    },
+    {
+        "id": "1d4bcd95.58c0b2",
+        "type": "ui_button",
+        "z": "6ce645dd.347edc",
+        "name": "",
+        "group": "6f2503eb.31960c",
+        "order": 4,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Previous Photo",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "Left",
+        "payloadType": "str",
+        "topic": "",
+        "x": 140,
+        "y": 420,
+        "wires": [
+            [
+                "97c48cf8.e3dbb"
+            ]
+        ]
+    },
+    {
+        "id": "57c35db.20ca5a4",
+        "type": "exec",
+        "z": "6ce645dd.347edc",
+        "command": "DISPLAY=:0 xdotool key ",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 590,
+        "y": 440,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "764c82dd.80a08c",
+        "type": "ui_button",
+        "z": "6ce645dd.347edc",
+        "name": "",
+        "group": "6f2503eb.31960c",
+        "order": 4,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Next Photo",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "Right",
+        "payloadType": "str",
+        "topic": "",
+        "x": 130,
+        "y": 460,
+        "wires": [
+            [
+                "97c48cf8.e3dbb"
+            ]
+        ]
+    },
+    {
+        "id": "9db5abdd.6c9508",
+        "type": "function",
+        "z": "6ce645dd.347edc",
+        "name": "Save State",
+        "func": "global.set(\"tablet_screen_state\",msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 630,
+        "y": 540,
+        "wires": [
+            [
+                "22540f62.acea"
+            ]
+        ]
+    },
+    {
+        "id": "97c48cf8.e3dbb",
+        "type": "function",
+        "z": "6ce645dd.347edc",
+        "name": "only if on",
+        "func": "var currentState=global.get(\"tablet_screen_state\")||\"on\";\nif(currentState===\"off\")\n    return null;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 400,
+        "y": 440,
+        "wires": [
+            [
+                "57c35db.20ca5a4"
+            ]
+        ]
+    },
+    {
+        "id": "65e188df.bb7438",
+        "type": "inject",
+        "z": "6ce645dd.347edc",
+        "name": "Auto every 5min",
+        "topic": "",
+        "payload": "Right",
+        "payloadType": "str",
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "300",
+        "x": 130,
+        "y": 380,
+        "wires": [
+            [
+                "97c48cf8.e3dbb"
+            ]
+        ]
+    },
+    {
+        "id": "18a33dd5.f3deb2",
+        "type": "comment",
+        "z": "6ce645dd.347edc",
+        "name": "Photo frame and Magic Mirror",
+        "info": "",
+        "x": 180,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "d1fbad59.a0523",
+        "type": "link in",
+        "z": "6ce645dd.347edc",
+        "name": "CONTROL Tablet Screen",
+        "links": [
+            "d0aa3c46.dad56"
+        ],
+        "x": 215,
+        "y": 600,
+        "wires": [
+            [
+                "4e64ef5f.0c735"
+            ]
+        ]
+    },
+    {
+        "id": "393e2d75.046b52",
+        "type": "serial in",
+        "z": "83be0801.deeb68",
+        "name": "CAR DETECTOR",
+        "serial": "f2054683.33aae8",
+        "x": 180,
+        "y": 1900,
+        "wires": [
+            [
+                "34380647.85261a",
+                "8bcde716.2feb48"
+            ]
+        ]
+    },
+    {
+        "id": "34380647.85261a",
+        "type": "debug",
+        "z": "83be0801.deeb68",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 450,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "cd8f3981.449938",
+        "type": "trigger",
+        "z": "83be0801.deeb68",
+        "op1": "open",
+        "op2": "close",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "2",
+        "extend": true,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "name": "",
+        "x": 590,
+        "y": 1960,
+        "wires": [
+            [
+                "82b6b5d6.56c1b8"
+            ]
+        ]
+    },
+    {
+        "id": "82b6b5d6.56c1b8",
+        "type": "link out",
+        "z": "83be0801.deeb68",
+        "name": "presence detection",
+        "links": [
+            "2276e85d.a2af08"
+        ],
+        "x": 715,
+        "y": 1960,
+        "wires": []
+    },
+    {
+        "id": "8bcde716.2feb48",
+        "type": "switch",
+        "z": "83be0801.deeb68",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "toyota",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "suzuki",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 410,
+        "y": 1960,
+        "wires": [
+            [
+                "cd8f3981.449938"
+            ],
+            [
+                "cd8f3981.449938"
+            ]
+        ]
+    },
+    {
+        "id": "f504ae7d.8b21b",
+        "type": "link in",
+        "z": "5ca74b14.4bc484",
+        "name": "GATE 2 FORCE",
+        "links": [
+            "a155a0cc.695e9",
+            "270f1b64.100094"
+        ],
+        "x": 760,
+        "y": 420,
+        "wires": [
+            [
+                "2a221f46.dc051"
+            ]
+        ]
+    },
+    {
+        "id": "fc45110d.01968",
+        "type": "comment",
+        "z": "ded91b28.b9e3a8",
+        "name": "Panel LCD",
+        "info": "",
+        "x": 100,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "763b6561.25456c",
+        "type": "mqtt out",
+        "z": "ded91b28.b9e3a8",
+        "name": "",
+        "topic": "panel/dominik/lcd",
+        "qos": "0",
+        "retain": "true",
+        "broker": "eaefbe14.0c428",
+        "x": 690,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "a30bbe68.81401",
+        "type": "mqtt in",
+        "z": "ded91b28.b9e3a8",
+        "name": "",
+        "topic": "panel/dominik/btn/re",
+        "qos": "0",
+        "broker": "eaefbe14.0c428",
+        "x": 130,
+        "y": 1540,
+        "wires": [
+            [
+                "5070217a.04686"
+            ]
+        ]
+    },
+    {
+        "id": "2a3ecdfe.f2b9b2",
+        "type": "mqtt in",
+        "z": "ded91b28.b9e3a8",
+        "name": "",
+        "topic": "panel/dominik/re",
+        "qos": "0",
+        "broker": "eaefbe14.0c428",
+        "x": 120,
+        "y": 1700,
+        "wires": [
+            [
+                "c6e4f69f.dc9e38"
+            ]
+        ]
+    },
+    {
+        "id": "c6e4f69f.dc9e38",
+        "type": "function",
+        "z": "ded91b28.b9e3a8",
+        "name": "Change Mode",
+        "func": "const MODES = 5 - 1;\nvar currentMode = global.get(\"LCD_MODE\")||0;\nif(msg.payload==1)\n    currentMode++;\n\nelse if(msg.payload==-1)\n    currentMode--;\n    \nif(currentMode>MODES)\n    currentMode=MODES;\nif(currentMode<0)\n    currentMode=0;\n    \nglobal.set(\"LCD_MODE\",currentMode);\n\nswitch(currentMode){\n    case 0:\n        msg.payload = \"Not implemented Option 0         \";\n        break;\n    case 1:\n        msg.payload = \"Not implemented Option 1         \";\n        break;\n    case 2:\n        msg.payload = \"Not implemented Option 2         \";\n        break;\n    case 3:\n        msg.payload = \"Not implemented Option 3         \";\n        break;\n        \n    case 4:\n        msg.payload = \"Force Car Gate                  \";\n        break;\n    \n    default:\n        msg.payload=\"Not implemented                \";\n        break;\n    \n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 1700,
+        "wires": [
+            [
+                "763b6561.25456c"
+            ]
+        ]
+    },
+    {
+        "id": "5070217a.04686",
+        "type": "function",
+        "z": "ded91b28.b9e3a8",
+        "name": "Mode Switch",
+        "func": "var currentMode=global.get(\"LCD_MODE\")||0;\n\nswitch(currentMode){\n    case 0:\n        \n        break;\n    \n    case 1:\n        \n        break;\n        \n    case 2:\n        \n        break;\n        \n    case 3:\n        \n        break;\n        \n    case 4:\n        msg.payload=\"force\";\n        return [null,null,null,null,msg];\n        break;\n        \n    default:\n    \n        break;\n}\n\n\nreturn [null,null,null,null,null];",
+        "outputs": 5,
+        "noerr": 0,
+        "x": 410,
+        "y": 1540,
+        "wires": [
+            [],
+            [],
+            [],
+            [],
+            [
+                "270f1b64.100094"
+            ]
+        ]
+    },
+    {
+        "id": "270f1b64.100094",
+        "type": "link out",
+        "z": "ded91b28.b9e3a8",
+        "name": "LCD MODE 5",
+        "links": [
+            "f504ae7d.8b21b"
+        ],
+        "x": 555,
+        "y": 1580,
+        "wires": []
+    }
+]
