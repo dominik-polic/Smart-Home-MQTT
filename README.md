@@ -1,7 +1,7 @@
 # Smart-Home-MQTT
 
 This is a new version of my smart home system, upgraded from my proprietary system to MQTT.
-
+Android APP source code is still in the [old project](https://github.com/wqwdpxd/Smart-Home) repo.
 
 This is a personal project to connect devices around my house to MQTT server and make them accessible over the internet. 
 
