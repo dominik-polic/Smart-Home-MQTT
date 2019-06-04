@@ -43,22 +43,22 @@ The basic concept is connecting various devies to an MQTT server over WiFi. MQTT
 
 ### Example in-house panel
 
-![Image here](/docs/images/panel-1.jpg)
+![Image here](/docs/images/panel-1.jpeg)
 
 
 
 
 ### A few APP screenshots
 
-![Image here](/docs/images/app-4.jpg)
+![Image here](/docs/images/app-4.png)
 
 
 
-![Image here](/docs/images/app-5.jpg)
+![Image here](/docs/images/app-5.png)
 
 
 
-![Image here](/docs/images/app-1.jpg)
+![Image here](/docs/images/app-1.png)
 
 
 
