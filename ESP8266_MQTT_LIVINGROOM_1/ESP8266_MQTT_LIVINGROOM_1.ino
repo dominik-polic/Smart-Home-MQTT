@@ -19,12 +19,13 @@
 #define TOPIC_TEMPERATURE "temperature/livingroom"
 #define TOPIC_HUMIDITY "humidity/livingroom"
 
-#define CLIENT_NAME "ESP8266_LIVINGROOM_1"
+#define CLIENT_NAME "ran32323_ESP8266_LIVINGROOM_1_random23123"
 #define ON_MSG "on"
 #define OFF_MSG "off"
 #define PUBLISH_DELAY 100
+#define LOOP_DELAY 70
 
-#define DEBUG false
+#define DEBUG true
 
 
 const char* ssid = "PoliNET";
@@ -49,7 +50,7 @@ float humidity=0;
 
 void setup_wifi() {
 
-  delay(10);
+  //delay(10);
   // We start by connecting to a WiFi network
   dPrintln("");
   dPrint("Connecting to ");
@@ -97,7 +98,6 @@ void callback(char* topic_c, byte* payload_c, unsigned int length) {
       dPrintln("REL2 off");
     }
   } 
-client.loop();  
 }
 
 
@@ -118,7 +118,6 @@ void updateDHT(){
     
     client.publish(TOPIC_TEMPERATURE,temperatureChar);
     client.publish(TOPIC_HUMIDITY,humidityChar);
-    client.loop();  
     dPrintln("Publish temperature and humidity");
   
   }
@@ -212,11 +211,9 @@ void updateSwitches(){
     lastActive1=temp1;
     if(lastActive1==HIGH){
       client.publish(TOPIC_SW1,OFF_MSG);
-      client.loop();  
       dPrintln("Publish SW1 OFF");
     }else{
       client.publish(TOPIC_SW1,ON_MSG);
-      client.loop();  
       dPrintln("Publish SW1 ON");
     }
   }
@@ -227,31 +224,29 @@ void updateSwitches(){
     lastActive2=temp2;
     if(lastActive2==HIGH){
       client.publish(TOPIC_SW2,OFF_MSG);
-      client.loop();  
       dPrintln("Publish SW2 OFF");
     }else{
       client.publish(TOPIC_SW2,ON_MSG);
-      client.loop();  
-      dPrintln("Publish SW2 ON");
     }
+      dPrintln("Publish SW2 ON");
   }
 
 }
 
 
 void loop() {
-
-  updateSwitches();
-  updateDHT();
+  delay(LOOP_DELAY);
+  
   //debugIt();
   if (!client.connected()) {
     reconnect();
   }
-  
+  updateSwitches();
+  updateDHT();
   
   client.loop();  
-  ArduinoOTA.handle();    
-
+      
+ArduinoOTA.handle();
 }
 
 void debugIt(){
