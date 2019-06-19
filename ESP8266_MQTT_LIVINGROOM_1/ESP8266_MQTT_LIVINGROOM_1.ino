@@ -25,6 +25,9 @@
 #define OFF_MSG "off"
 #define PUBLISH_DELAY 100
 #define LOOP_DELAY 70
+<<<<<<< HEAD
+>>>>>>> parent of 6bc1474... Revert "Update ESP8266_MQTT_LIVINGROOM_1.ino"
+=======
 >>>>>>> parent of 6bc1474... Revert "Update ESP8266_MQTT_LIVINGROOM_1.ino"
 
 #define DEBUG true
@@ -236,8 +239,13 @@ void updateSwitches(){
 
 void loop() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   updateSwitches();
+=======
+  delay(LOOP_DELAY);
+  
+>>>>>>> parent of 6bc1474... Revert "Update ESP8266_MQTT_LIVINGROOM_1.ino"
 =======
   delay(LOOP_DELAY);
   
