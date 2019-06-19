@@ -1,7 +1,12 @@
+#include "DHT.h"
+
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
 #include <ArduinoOTA.h>
 
+#define DHT_TYPE DHT11
+#define DHT_INTERVAL 300000
+#define DHT_PIN D4
 #define SW1 D7
 #define SW2 D1 
 #define REL1 D6
@@ -11,12 +16,15 @@
 #define TOPIC_REL2 "lights/livingroom/2"
 #define TOPIC_SW1 "switches/livingroom/1"
 #define TOPIC_SW2 "switches/livingroom/2"
+#define TOPIC_TEMPERATURE "temperature/livingroom"
+#define TOPIC_HUMIDITY "humidity/livingroom"
+
 #define CLIENT_NAME "ESP8266_LIVINGROOM_1"
 #define ON_MSG "on"
 #define OFF_MSG "off"
-#define PUBLISH_DELAY 50
+#define PUBLISH_DELAY 100
 
-#define DEBUG true
+#define DEBUG false
 
 
 const char* ssid = "PoliNET";
@@ -25,13 +33,19 @@ const char* mqtt_server = "192.168.1.30";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
+DHT dht(DHT_PIN, DHT_TYPE);   
+
 
 char msg[50];
 long lastTime1=0;
 long lastTime2=0; 
+long lastDHTTime=0;
 long lastPublish=0;
 boolean lastActive1=HIGH;
 boolean lastActive2=HIGH;
+float temperature=0;
+float humidity=0;
+
 
 void setup_wifi() {
 
@@ -87,6 +101,31 @@ client.loop();
 }
 
 
+void updateDHT(){
+  if(millis()>lastDHTTime+DHT_INTERVAL){
+    lastDHTTime=millis();
+
+    temperature = dht.readTemperature(); // Gets the values of the temperature
+    humidity = dht.readHumidity(); // Gets the values of the humidity 
+    
+    //Update MQTT values
+    String temperatureString = ""+String(temperature);
+    String humidityString = ""+String(humidity);
+    char temperatureChar[20];
+    char humidityChar[20];
+    temperatureString.toCharArray(temperatureChar,20);
+    humidityString.toCharArray(humidityChar,20);
+    
+    client.publish(TOPIC_TEMPERATURE,temperatureChar);
+    client.publish(TOPIC_HUMIDITY,humidityChar);
+    client.loop();  
+    dPrintln("Publish temperature and humidity");
+  
+  }
+
+  
+}
+
 void reconnect() {
   // Loop until we're reconnected
   while (!client.connected()) {
@@ -106,7 +145,6 @@ void reconnect() {
       delay(5000);
     }
   }
-  digitalWrite(LED_BUILTIN,LOW);
 }
 
 void dPrint(String text){
@@ -150,8 +188,6 @@ void startOTAServer(){
 
 
 void setup() {
-  pinMode(LED_BUILTIN, OUTPUT);     // Initialize the BUILTIN_LED pin as an output
-  digitalWrite(LED_BUILTIN, HIGH);
   pinMode(SW1,INPUT);
   pinMode(REL1,OUTPUT);
   pinMode(SW2,INPUT_PULLUP);
@@ -161,6 +197,8 @@ void setup() {
   client.setServer(mqtt_server, 1883);
   client.setCallback(callback);
   startOTAServer();
+  pinMode(DHT_PIN,INPUT);
+  dht.begin();
 }
 
 void updateSwitches(){
@@ -204,6 +242,7 @@ void updateSwitches(){
 void loop() {
 
   updateSwitches();
+  updateDHT();
   //debugIt();
   if (!client.connected()) {
     reconnect();
