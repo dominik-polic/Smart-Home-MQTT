@@ -1,3 +1,4 @@
+
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
 #include <ArduinoOTA.h>
@@ -11,24 +12,11 @@
 #define TOPIC_REL2 "lights/livingroom/2"
 #define TOPIC_SW1 "switches/livingroom/1"
 #define TOPIC_SW2 "switches/livingroom/2"
-<<<<<<< HEAD
 #define CLIENT_NAME "ESP8266_LIVINGROOM_1"
-#define ON_MSG "on"
-#define OFF_MSG "off"
-#define PUBLISH_DELAY 50
-=======
-#define TOPIC_TEMPERATURE "temperature/livingroom"
-#define TOPIC_HUMIDITY "humidity/livingroom"
-
-#define CLIENT_NAME "ran32323_ESP8266_LIVINGROOM_1_random23123"
 #define ON_MSG "on"
 #define OFF_MSG "off"
 #define PUBLISH_DELAY 100
 #define LOOP_DELAY 70
-<<<<<<< HEAD
->>>>>>> parent of 6bc1474... Revert "Update ESP8266_MQTT_LIVINGROOM_1.ino"
-=======
->>>>>>> parent of 6bc1474... Revert "Update ESP8266_MQTT_LIVINGROOM_1.ino"
 
 #define DEBUG true
 
@@ -39,6 +27,7 @@ const char* mqtt_server = "192.168.1.30";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
+
 
 char msg[50];
 long lastTime1=0;
@@ -100,33 +89,6 @@ void callback(char* topic_c, byte* payload_c, unsigned int length) {
 }
 
 
-<<<<<<< HEAD
-=======
-void updateDHT(){
-  if(millis()>lastDHTTime+DHT_INTERVAL){
-    lastDHTTime=millis();
-
-    temperature = dht.readTemperature(); // Gets the values of the temperature
-    humidity = dht.readHumidity(); // Gets the values of the humidity 
-    
-    //Update MQTT values
-    String temperatureString = ""+String(temperature);
-    String humidityString = ""+String(humidity);
-    char temperatureChar[20];
-    char humidityChar[20];
-    temperatureString.toCharArray(temperatureChar,20);
-    humidityString.toCharArray(humidityChar,20);
-    
-    client.publish(TOPIC_TEMPERATURE,temperatureChar);
-    client.publish(TOPIC_HUMIDITY,humidityChar);
-    dPrintln("Publish temperature and humidity");
-  
-  }
-
-  
-}
-
->>>>>>> parent of 6bc1474... Revert "Update ESP8266_MQTT_LIVINGROOM_1.ino"
 void reconnect() {
   // Loop until we're reconnected
   while (!client.connected()) {
@@ -146,7 +108,6 @@ void reconnect() {
       delay(5000);
     }
   }
-  digitalWrite(LED_BUILTIN,LOW);
 }
 
 void dPrint(String text){
@@ -190,8 +151,6 @@ void startOTAServer(){
 
 
 void setup() {
-  pinMode(LED_BUILTIN, OUTPUT);     // Initialize the BUILTIN_LED pin as an output
-  digitalWrite(LED_BUILTIN, HIGH);
   pinMode(SW1,INPUT);
   pinMode(REL1,OUTPUT);
   pinMode(SW2,INPUT_PULLUP);
@@ -201,6 +160,7 @@ void setup() {
   client.setServer(mqtt_server, 1883);
   client.setCallback(callback);
   startOTAServer();
+
 }
 
 void updateSwitches(){
@@ -238,24 +198,13 @@ void updateSwitches(){
 
 
 void loop() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  updateSwitches();
-=======
   delay(LOOP_DELAY);
   
->>>>>>> parent of 6bc1474... Revert "Update ESP8266_MQTT_LIVINGROOM_1.ino"
-=======
-  delay(LOOP_DELAY);
-  
->>>>>>> parent of 6bc1474... Revert "Update ESP8266_MQTT_LIVINGROOM_1.ino"
   //debugIt();
   if (!client.connected()) {
     reconnect();
   }
   updateSwitches();
-  updateDHT();
   
   client.loop();  
       
