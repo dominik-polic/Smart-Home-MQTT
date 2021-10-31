@@ -7,6 +7,7 @@
 
 #define TOPIC_DOOR_LOCK "lock/door/house"
 #define TOPIC_DOOR_SWITCH "switch/door/house"
+#define TOPIC_DOOR_STATE "state/door/house"
 #define BELL_MSG "bell"
 #define BUTTON_MSG "button"
 #define PANEL_MSG "panel"
@@ -30,12 +31,12 @@
 
 #define PUBLISH_DELAY 50
 #define DEBOUNCE_TIME 300
-#define DEBUG false
+#define DEBUG true
 
 
 const char* ssid = "PoliNET";
 const char* password = "12345678";
-const char* mqtt_server = "192.168.1.30";
+const char* mqtt_server = "192.168.1.17";
 
 Servo servo;
 WiFiClient espClient;
@@ -46,6 +47,7 @@ unsigned long lastButtonTime=0;
 unsigned long lastPanelTime=0;
 unsigned long lastBellTime=0;
 int currentangle=0;
+boolean isLocked=false;
 boolean lastButton=LOW;
 boolean lastPanel=LOW;
 boolean lastBell=LOW;
@@ -88,6 +90,8 @@ void callback(char* topic_c, byte* payload_c, unsigned int length) {
       lockDoor();
     else if(payload==UNLOCK_MSG)
       unlockDoor();
+    else if(payload == TOGGLE_MSG)
+      toggleDoorOffline();
 
     
   }
@@ -101,7 +105,7 @@ void reconnect() {
   while (!client.connected()) {
     dPrint("Attempting MQTT connection...");
     // Attempt to connect
-    if (client.connect(CLIENT_NAME,"dominik","dominik325")) {
+    if (client.connect(CLIENT_NAME)) {
       dPrintln("connected");
       //Subscribe to topics
       client.subscribe(TOPIC_DOOR_LOCK,0);       
@@ -173,7 +177,7 @@ void setup() {
   client.setServer(mqtt_server, 1883);
   client.setCallback(callback);
   
-  //Don't do this, since it shakes the actual motor real quick on reset, whappen a lot...
+  //Don't do this, since it shakes the actual motor real quick on reset, happen a lot...
   //servo.attach(SERVO_PIN); //3(RX)
   //servo.write(90);
   //servo.detach();
@@ -211,7 +215,8 @@ void updateButtons(){
     lastButton=LOW;
     delay(BELL_DEBOUNCE);
     if(digitalRead(BUTTON_PIN)==LOW)
-      client.publish(TOPIC_DOOR_SWITCH,BUTTON_MSG);      
+      toggleDoorOffline();
+      //client.publish(TOPIC_DOOR_SWITCH,BUTTON_MSG);      
   }
 
   if(currentPanel==HIGH&&lastPanel==LOW&&currentTime>lastPanelTime+DEBOUNCE_TIME){
@@ -223,7 +228,8 @@ void updateButtons(){
     lastPanel=LOW;
     delay(BELL_DEBOUNCE);
       if(digitalRead(PANEL_PIN)==LOW)
-      client.publish(TOPIC_DOOR_SWITCH,PANEL_MSG);       
+        toggleDoorOffline();
+        //client.publish(TOPIC_DOOR_SWITCH,PANEL_MSG);       
   }
 
   if(currentBell==HIGH&&lastBell==LOW&&currentTime>lastBellTime+DEBOUNCE_TIME){
@@ -255,7 +261,7 @@ void updateButtonsOffline(){
   if(currentButton==LOW&&lastButton==HIGH&&currentTime>lastButtonTime+DEBOUNCE_TIME){
     lastButtonTime=currentTime;
     lastButton=LOW;
-      unlockDoor();      
+      toggleDoorOffline();      
   }
 
   if(currentPanel==HIGH&&lastPanel==LOW&&currentTime>lastPanelTime+DEBOUNCE_TIME){
@@ -265,26 +271,41 @@ void updateButtonsOffline(){
   if(currentPanel==LOW&&lastPanel==HIGH&&currentTime>lastPanelTime+DEBOUNCE_TIME){
     lastPanelTime=currentTime;
     lastPanel=LOW;
-      unlockDoor();      
+      toggleDoorOffline();     
   }
 
   
 }
 
 
-
 void lockDoor(){
+  if(!isLocked){
+    isLocked=true;
     servo.attach(SERVO_PIN);
     servo.write(LOCK_VALUE);
     delay(LOCKING_TIME);
-    servo.detach();     
+    servo.detach();   
+    client.publish(TOPIC_DOOR_STATE,LOCK_MSG);   
+  }  
 }
 
 void unlockDoor(){
+  if(isLocked){
+    isLocked=false;
     servo.attach(SERVO_PIN);
     servo.write(UNLOCK_VALUE);
     delay(LOCKING_TIME);
-    servo.detach();     
+    servo.detach();    
+    client.publish(TOPIC_DOOR_STATE,UNLOCK_MSG);   
+  }  
+}
+
+
+void toggleDoorOffline(){
+  if(isLocked)
+    unlockDoor();
+  else
+    lockDoor();
 }
 
 
