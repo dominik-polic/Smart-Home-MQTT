@@ -50,10 +50,10 @@ void setup_wifi() {
 
   WiFi.begin(ssid, password);
   WiFi.mode(WIFI_STA);
-  while (WiFi.status() != WL_CONNECTED) {
+ /* while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     dPrint(".");
-  }
+  }*/
 
   dPrintln("");
   dPrintln("WiFi connected");
@@ -105,6 +105,7 @@ void startOTAServer(){
 
 
 void setup() {
+
   pinMode(LED_BUILTIN, OUTPUT);     // Initialize the BUILTIN_LED pin as an output
   digitalWrite(LED_BUILTIN, LOW);
   pinMode(BUTTON_PIN,INPUT_PULLUP);
@@ -118,6 +119,7 @@ void setup() {
   servo.attach(SERVO_PIN); //3(RX)
 servo.write(90);
 servo.detach();
+
 }
 
 
