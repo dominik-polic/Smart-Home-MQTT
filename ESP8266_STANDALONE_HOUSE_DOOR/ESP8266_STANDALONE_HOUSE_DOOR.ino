@@ -130,6 +130,7 @@ void loop() {
   updateButtonsOffline();  
   
   ArduinoOTA.handle();    
+  delay(10);
 }
 
 
@@ -148,7 +149,9 @@ void updateButtonsOffline(){
   if(currentButton==LOW&&lastButton==HIGH&&currentTime>lastButtonTime+DEBOUNCE_TIME){
     lastButtonTime=currentTime;
     lastButton=LOW;
-      toggleDoorOffline();      
+    delay(70);
+      if(currentButton==LOW)
+        toggleDoorOffline();      
   }
 
   if(currentPanel==HIGH&&lastPanel==LOW&&currentTime>lastPanelTime+DEBOUNCE_TIME){
@@ -158,6 +161,8 @@ void updateButtonsOffline(){
   if(currentPanel==LOW&&lastPanel==HIGH&&currentTime>lastPanelTime+DEBOUNCE_TIME){
     lastPanelTime=currentTime;
     lastPanel=LOW;
+    delay(70);
+    if(currentPanel==LOW)
       toggleDoorOffline();      
   }
 
